@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="color-scheme" content="light">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Ansonika">
+    <title>Royal Travel</title>
+
+
+    <!-- GOOGLE WEB FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/vendors.min.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+
+    <link href="css/custom.css" rel="stylesheet">
+
+
+    <!-- GOOGLE TRANSLATE SCRIPT -->
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body>
+    <div id="google_translate_element" style="visibility:hidden; height:0; overflow:hidden;"></div>
+
+
+    <div id="preloader">
+        <div data-loader="circle-side"></div>
+    </div><!-- /Page Preload -->
+
+    <div class="layer"></div><!-- Opacity Mask -->
+
+    <!-- Start Navbar -->
+    <header class="reveal_header">
+        <div class="container-fluid">
+            <div class="row align-items-center d-none d-sm-flex" id="navbar-desktop">
+                <div class="col-6">
+                    <a href="index.html" class="logo_normal"><img src="img/logo.png" height="84" alt=""></a>
+                    <a href="index.html" class="logo_sticky"><img src="img/logo_sticky.png" height="84" alt=""></a>
+                </div>
+                <div class="col-6">
+                    <nav>
+                        <ul>
+                            <li class="language-selector-dropdown">
+                                <a class="dropdown-toggle" href="#" id="languageDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="padding: 10px; display: inline-block; text-decoration: none;">
+                                    <i class="fas fa-globe"></i> <span id="current-lang-text">EN</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('en'); return false;"
+                                            data-lang="en">English</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('es'); return false;"
+                                            data-lang="es">Español</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="cart.html" class="cart-icon-link">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span class="cart-count">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0" class="menu_open">
+                                    <div class="hamburger hamburger--spin">
+                                        <div class="hamburger-box">
+                                            <div class="hamburger-inner"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Mobile Navbar -->
+            <div class="d-sm-none" id="navbar-mobile"> <!-- Show only on extra-small screens (<576px) -->
+                <div class="row">
+                    <div class="col-12 text-center" style="padding-top: 10px; padding-bottom: 5px;"> <!-- Logo Row -->
+                        <a href="index.html" class="logo_normal"><img src="img/logo.png" height="70" alt=""></a>
+                        <a href="index.html" class="logo_sticky"><img src="img/logo_sticky.png" height="70" alt=""></a>
+                    </div>
+                </div>
+                <div class="row align-items-center" style="padding-bottom: 10px;"> <!-- Icon Row -->
+                    <div class="col-12">
+                        <nav>
+                            <ul
+                                style="display: flex; justify-content: space-around; align-items: center; list-style: none; padding: 0; margin: 0;">
+                                <li class="language-selector-dropdown">
+                                    <a class="dropdown-toggle" href="#" id="languageDropdownMenuLinkMobile"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                        style="padding: 10px; display: inline-block; text-decoration: none;">
+                                        <i class="fas fa-globe"></i> <span id="current-lang-text-mobile">EN</span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end"
+                                        aria-labelledby="languageDropdownMenuLinkMobile">
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="changeLanguage('en'); return false;" data-lang="en">English</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="changeLanguage('es'); return false;" data-lang="es">Español</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="cart.html" class="cart-icon-link">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        <span class="cart-count">0</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0" class="menu_open">
+                                        <div class="hamburger hamburger--spin">
+                                            <div class="hamburger-box">
+                                                <div class="hamburger-inner"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="panel_menu">
+        <div class="panel__content">
+            <div class="panel__content_wrapper">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-5">
+                            <nav class="wrapper_menu">
+                                <ul>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="index.html" class="link">Home</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="hotels.html">Luxury Villas & Resorts</a>
+                                            <div class="image">
+                                                <img src="img/navbar/hotel.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="yachts.html">Private Yacht Charters</a>
+                                            <div class="image">
+                                                <!-- TODO: change this to yacht -->
+                                                <img src="img/navbar/yacht.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="jets.html">Private Jet</a>
+                                            <div class="image">
+                                                <img src="img/navbar/jet.png" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="golf.html">Golf Courses</a>
+                                            <div class="image">
+                                                <img src="img/navbar/golf.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="about.html">About</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="news.html">News & Events</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="contacts.html">Contacts</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav><!-- /wrapper_menu -->
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-end">
+                            <div class="menu_panel_details">
+                                <div class="row justify-content-between">
+                                    <div class="col-lg-6 mb-lg-0 mb-4">
+                                        <h5>Address</h5>
+                                        <p>PT. Anggun Royal Travel<br>Lombok, Indonesia</p>
+
+                                    </div>
+                                    <div class="col-lg-5 mb-lg-0 mb-4">
+                                        <h5>Contacts</h5>
+                                        <div class="contacts">
+                                            <ul>
+                                                <li><a>+ 62 822 375 865 65</a></li>
+                                                <li><a>info@royaltravel.agency</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social">
+                                            <ul>
+                                                <li><a href="https://www.instagram.com/royaltravelluxury"
+                                                        target="_blank"><i class="bi bi-instagram"></i></a></li>
+                                                <li><a href="https://wa.me/+6282237586565" target="_blank"><i
+                                                            class="bi bi-whatsapp"></i></a></li>
+                                                <li><a href="https://web.facebook.com/profile.php?id=61573090605100"
+                                                        target="_blank"><i class="bi bi-facebook"></i></a></li>
+                                                <li><a href="https://x.com/RoyalTrvl" target="_blank"><i
+                                                            class="bi bi-twitter-x"></i></a></li>
+                                                <li><a href="https://www.tiktok.com/@royaltravelluxury"
+                                                        target="_blank"><i class="bi bi-tiktok"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar -->
+
+    <main>
+
+        <div class="hero medium-height jarallax" data-jarallax data-speed="0.2">
+            <img class="jarallax-img" src="img/hero_blog.jpg" alt="" id="news-post-hero-img">
+            <div class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center animate_hero"
+                data-opacity-mask="rgba(0, 0, 0, 0.5)">
+                <div class="container">
+                    <small class="slide-animated one" id="news-post-date-category">Date - by Admin</small>
+                    <h1 class="slide-animated two" id="news-post-title">Article Title</h1>
+                </div>
+            </div>
+        </div>
+        <!-- /Background Img Parallax -->
+
+        <div class="container margin_120_95">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="box_contents_in" id="news-post-content">
+                        <!-- Article content will be injected here -->
+                        <p>Loading article...</p>
+                    </div>
+                </div>
+                <div class="col-lg-10 my-4" id="news-post-figure-container" style="display: none;">
+                    <figure><img src="" alt="" class="img-fluid" id="news-post-main-image"></figure>
+                </div>
+                <div class="col-lg-8" id="news-post-additional-content-container">
+                    <!-- Additional dynamic content can be placed here if needed -->
+                </div>
+            </div>
+            <!--/row -->
+        </div>
+        <!--/containera -->
+
+        <div class="bg_white">
+            <div class="container margin_120_95">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div id="comments">
+                            <h3>Comments</h3>
+                            <ul>
+                                <li>
+                                    <div class="avatar">
+                                        <a href="#"><img src="img/avatar1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="comment_right clearfix">
+                                        <div class="comment_info">
+                                            By <a href="#">Anna Smith</a><span>|</span>15/05/2025<span>|</span><a
+                                                href="#">Reply</a>
+                                        </div>
+                                        <p>
+                                            Great article! I found the information very helpful and well-presented.
+                                        </p>
+                                    </div>
+                                    <ul class="replied-to">
+                                        <li>
+                                            <div class="avatar">
+                                                <a href="#"><img src="img/avatar4.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="comment_right clearfix">
+                                                <div class="comment_info">
+                                                    By <a href="#">John Doe</a><span>|</span>15/05/2025<span>|</span><a
+                                                        href="#">Reply</a>
+                                                </div>
+                                                <p>
+                                                    I agree with Anna. This article provides a lot of valuable insights.
+                                                </p>
+                                                <p>
+                                                    Looking forward to more content like this. Keep up the good work!
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="avatar">
+                                        <a href="#"><img src="img/avatar1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="comment_right clearfix">
+                                        <div class="comment_info">
+                                            By <a href="#">Emily Johnson</a><span>|</span>15/05/2025<span>|</span><a
+                                                href="#">Reply</a>
+                                        </div>
+                                        <p>
+                                            Nice article! It was a great read.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr class="more_margin">
+                        <h5 class="mb-3">Leave a comment</h5>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="name" id="name2" class="form-control" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="email" id="email2" class="form-control"
+                                        placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" name="email" id="website3" class="form-control"
+                                        placeholder="Website">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="comments" id="comments2" rows="6"
+                                placeholder="Comment"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" id="submit2" class="btn_1 outline mb-3">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/container -->
+        </div>
+        <!--/bg_white -->
+
+    </main>
+    <footer class="revealed">
+        <div class="footer_bg">
+            <div class="gradient_over"></div>
+            <div class="background-image" data-background="url(img/footer.jpg)"></div>
+        </div>
+        <div class="container">
+            <div class="row move_content">
+                <div class="col-lg-4 col-md-12">
+                    <h5>Contacts</h5>
+                    <ul>
+                        <li>PT. Anggun Royal Travel<br>Lombok, Indonesia<br><br></li>
+                        <li><strong><a>info@royaltravel.agency</a></strong></li>
+                        <li><strong><a>+ 62 822 375 865 65</a></strong></li>
+                    </ul>
+                    <div class="social">
+                        <ul>
+                            <li><a href="https://www.instagram.com/royaltravelluxury" target="_blank"><i
+                                        class="bi bi-instagram"></i></a></li>
+                            <li><a href="https://wa.me/+6282237586565" target="_blank"><i
+                                        class="bi bi-whatsapp"></i></a></li>
+                            <li><a href="https://web.facebook.com/profile.php?id=61573090605100" target="_blank"><i
+                                        class="bi bi-facebook"></i></a></li>
+                            <li><a href="https://x.com/RoyalTrvl" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                            </li>
+                            <li><a href="https://www.tiktok.com/@royaltravelluxury" target="_blank"><i
+                                        class="bi bi-tiktok"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 ms-lg-auto">
+                    <h5>Explore</h5>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="hotels.html">Luxury Villas & Resorts</a></li>
+                            <li><a href="yachts.html">Private Yacht Charters</a></li>
+                            <li><a href="jets.html">Private Jet</a></li>
+                            <li><a href="golf.html">Golf Courses</a></li>
+                            <li><a href="news.html">News &amp; Events</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div id="newsletter">
+                        <h5>Newsletter</h5>
+                        <div id="message-newsletter"></div>
+                        <form method="post" action="phpmailer/newsletter_template_email.php" name="newsletter_form"
+                            id="newsletter_form">
+                            <div class="form-group">
+                                <input type="email" name="email_newsletter" id="email_newsletter" class="form-control"
+                                    placeholder="Your email">
+                                <button type="submit" id="submit-newsletter"><i class="bi bi-send"></i></button>
+                            </div>
+                        </form>
+                        <p>Receive latest offers and promos without spam. You can cancel anytime.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/row-->
+        </div>
+        <!--/container-->
+        <div class="copy">
+            <div class="container">
+                Royal Travel Agency
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- /back to top -->
+
+    <!-- COMMON SCRIPTS -->
+     <script src="js/config.js"></script>
+
+    <script src="js/common_scripts.js"></script>
+    <script src="js/common_functions.js"></script>
+    <script src="phpmailer/validate.js"></script>
+
+    <!-- NEWS DATA SCRIPT -->
+    <script src="news-data.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleSlug = urlParams.get('slug');
+
+            const heroImgElement = document.getElementById('news-post-hero-img');
+            const dateCategoryElement = document.getElementById('news-post-date-category');
+            const titleElement = document.getElementById('news-post-title');
+            const contentElement = document.getElementById('news-post-content');
+            const mainImageElement = document.getElementById('news-post-main-image');
+            const figureContainer = document.getElementById('news-post-figure-container');
+            // const additionalContentContainer = document.getElementById('news-post-additional-content-container');
+
+            if (articleSlug && newsData) {
+                const article = newsData.find(art => art.slug === articleSlug);
+
+                if (article) {
+                    // Populate Hero Section
+                    if (heroImgElement) {
+                        // For the generic hero, we might keep it as is or use a category-specific image if available.
+                        // For now, we'll use the article's main image for the hero as well, or a default if not set.
+                        heroImgElement.src = article.image || 'img/hero_blog.jpg';
+                        heroImgElement.alt = article.title;
+                    }
+                    dateCategoryElement.textContent = `${article.date} - ${article.category}`;
+                    titleElement.textContent = article.title;
+
+                    // Populate Main Content Area
+                    // The main image for the article body (this was the structure in the original static page)
+                    // If your design intends the hero image to be the *only* large image, you can hide/remove the figureContainer.
+                    mainImageElement.src = article.image;
+                    mainImageElement.alt = article.title;
+                    figureContainer.style.display = 'block'; // Show the figure container
+
+                    // Inject the article content HTML
+                    contentElement.innerHTML = `<h2>${article.title}</h2>${article.content}`;
+
+                } else {
+                    contentElement.innerHTML = '<p>Article not found.</p>';
+                    if (titleElement) titleElement.textContent = 'Article Not Found';
+                }
+            } else {
+                contentElement.innerHTML = '<p>No article slug provided or news data unavailable.</p>';
+                if (titleElement) titleElement.textContent = 'Error';
+            }
+
+            // Re-initialize CUE animations if available
+            if (typeof cue === 'function') {
+                cue.init();
+            }
+        });
+    </script>
+
+    <script src="js/cart.js"></script>
+
+
+    <!-- Language switcher script -->
+    <script src="js/language.js"></script>
+</body>
+
+</html>

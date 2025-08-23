@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8"> <meta name="color-scheme" content="light">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Ansonika">
+    <title>Royal Travel Agency</title>
+
+
+    <!-- GOOGLE WEB FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <link href="css/style-new.css" rel="stylesheet">
+    <link href="css/vendors.min.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+
+    <link href="css/custom.css" rel="stylesheet">
+
+
+    <!-- GOOGLE TRANSLATE SCRIPT -->
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <link href="css/custom-hotel-info.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="google_translate_element" style="visibility:hidden; height:0; overflow:hidden;"></div>
+
+
+    <div id="preloader">
+        <div data-loader="circle-side"></div>
+    </div><!-- /Page Preload -->
+
+    <div class="layer"></div><!-- Opacity Mask -->
+
+    <!-- Start Navbar -->
+    <header class="reveal_header">
+        <div class="container-fluid">
+            <div class="row align-items-center d-none d-sm-flex" id="navbar-desktop">
+                <div class="col-6">
+                    <a href="index.html" class="logo_normal"><img src="img/logo.png" height="84" alt=""></a>
+                    <a href="index.html" class="logo_sticky"><img src="img/logo_sticky.png" height="84" alt=""></a>
+                </div>
+                <div class="col-6">
+                    <nav>
+                        <ul>
+                            <li class="language-selector-dropdown">
+                                <a class="dropdown-toggle" href="#" id="languageDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="padding: 10px; display: inline-block; text-decoration: none;">
+                                    <i class="fas fa-globe"></i> <span id="current-lang-text">EN</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('en'); return false;"
+                                            data-lang="en">English</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('es'); return false;"
+                                            data-lang="es">Español</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="cart.html" class="cart-icon-link">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span class="cart-count">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0" class="menu_open">
+                                    <div class="hamburger hamburger--spin">
+                                        <div class="hamburger-box">
+                                            <div class="hamburger-inner"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Mobile Navbar -->
+            <div class="d-sm-none" id="navbar-mobile"> <!-- Show only on extra-small screens (<576px) -->
+                <div class="row">
+                    <div class="col-12 text-center" style="padding-top: 10px; padding-bottom: 5px;"> <!-- Logo Row -->
+                        <a href="index.html" class="logo_normal"><img src="img/logo.png" height="70" alt=""></a>
+                        <a href="index.html" class="logo_sticky"><img src="img/logo_sticky.png" height="70" alt=""></a>
+                    </div>
+                </div>
+                <div class="row align-items-center" style="padding-bottom: 10px;"> <!-- Icon Row -->
+                    <div class="col-12">
+                        <nav>
+                            <ul
+                                style="display: flex; justify-content: space-around; align-items: center; list-style: none; padding: 0; margin: 0;">
+                                <li class="language-selector-dropdown">
+                                    <a class="dropdown-toggle" href="#" id="languageDropdownMenuLinkMobile"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                        style="padding: 10px; display: inline-block; text-decoration: none;">
+                                        <i class="fas fa-globe"></i> <span id="current-lang-text-mobile">EN</span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end"
+                                        aria-labelledby="languageDropdownMenuLinkMobile">
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="changeLanguage('en'); return false;" data-lang="en">English</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="changeLanguage('es'); return false;" data-lang="es">Español</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="cart.html" class="cart-icon-link">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        <span class="cart-count">0</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0" class="menu_open">
+                                        <div class="hamburger hamburger--spin">
+                                            <div class="hamburger-box">
+                                                <div class="hamburger-inner"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="panel_menu">
+        <div class="panel__content">
+            <div class="panel__content_wrapper">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-5">
+                            <nav class="wrapper_menu">
+                                <ul>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="index.html" class="link">Home</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="hotels.html">Luxury Villas & Resorts</a>
+                                            <div class="image">
+                                                <img src="img/navbar/hotel.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="yachts.html">Private Yacht Charters</a>
+                                            <div class="image">
+                                                <!-- TODO: change this to yacht -->
+                                                <img src="img/navbar/yacht.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="jets.html">Private Jet</a>
+                                            <div class="image">
+                                                <img src="img/navbar/jet.png" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="golf.html">Golf Courses</a>
+                                            <div class="image">
+                                                <img src="img/navbar/golf.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="about.html">About</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="news.html">News & Events</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="contacts.html">Contacts</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav><!-- /wrapper_menu -->
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-end">
+                            <div class="menu_panel_details">
+                                <div class="row justify-content-between">
+                                    <div class="col-lg-6 mb-lg-0 mb-4">
+                                        <h5>Address</h5>
+                                        <p>PT. Anggun Royal Travel<br>Lombok, Indonesia</p>
+
+                                    </div>
+                                    <div class="col-lg-5 mb-lg-0 mb-4">
+                                        <h5>Contacts</h5>
+                                        <div class="contacts">
+                                            <ul>
+                                                <li><a>+ 62 822 375 865 65</a></li>
+                                                <li><a>info@royaltravel.agency</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social">
+                                            <ul>
+                                                <li><a href="https://www.instagram.com/royaltravelluxury"
+                                                        target="_blank"><i class="bi bi-instagram"></i></a></li>
+                                                <li><a href="https://wa.me/+6282237586565" target="_blank"><i
+                                                            class="bi bi-whatsapp"></i></a></li>
+                                                <li><a href="https://web.facebook.com/profile.php?id=61573090605100"
+                                                        target="_blank"><i class="bi bi-facebook"></i></a></li>
+                                                <li><a href="https://x.com/RoyalTrvl" target="_blank"><i
+                                                            class="bi bi-twitter-x"></i></a></li>
+                                                <li><a href="https://www.tiktok.com/@royaltravelluxury"
+                                                        target="_blank"><i class="bi bi-tiktok"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar -->
+
+
+
+    <main>
+
+        <!-- Hero section with hotel overview -->
+        <section class="hero medium-height jarallax">
+            <div class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center animate_hero"
+                data-opacity-mask="rgba(0, 0, 0, 0.5)">
+                <div class="container">
+                    <small class="slide-animated one">Luxury Experience</small>
+                    <h1 class="slide-animated two hotel-hero-title">Marianna Resort</h1>
+                    <p class="slide-animated three hotel-hero-description">Experience ultimate luxury in our beachfront
+                        paradise</p>
+                    <br>
+                    <div class="row justify-content-center slide-animated three">
+                        <div class="col-xl-10">
+                            <a href="#rooms_section" class="btn_1 outline white">View Rooms</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mouse_wp">
+                    <div class="mouse">
+                        <div class="scroll"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Hero -->
+
+        <!-- Resort overview - Creative New Layout -->
+        <section class="margin_120_95 hotel-overview-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 d-flex align-items-center mt-5 mt-lg-0 p-5">
+                        <div class="ps-lg-5">
+                            <div class="title">
+                                <small class="hotel-overview-caption">The ultimate getaway</small>
+                                <h2 class="hotel-overview-title">Welcome to Marianna Resort</h2>
+                            </div>
+                            <p class="lead hotel-overview-subtitle">Nestled along pristine beaches with breathtaking
+                                ocean views, Marianna
+                                Resort offers an unparalleled luxury experience.</p>
+                            <p class="hotel-overview-description">Our award-winning resort combines contemporary
+                                elegance with traditional hospitality,
+                                creating a haven of tranquility and indulgence.</p>
+
+                            <!-- <p class="mt-3"><a href="#0" class="btn_1">Discover More</a></p> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div id="overviewImagesContainer">
+                            <div class="mb-4" style="height: 250px;">
+                                <div class="pinned-image__container">
+                                    <img src="img/resort/resort-1.jpg" alt="Resort View 1"
+                                        class="img-fluid rounded shadow-sm">
+                                </div>
+                            </div>
+                            <div style="height: 250px;" class="mb-4">
+                                <div class="pinned-image__container">
+                                    <img src="img/resort/resort-2.jpg" alt="Resort View 2"
+                                        class="img-fluid rounded shadow-sm">
+                                </div>
+                            </div>
+                            <div style="height: 250px;">
+                                <div class="pinned-image__container">
+                                    <img src="img/resort/default-3.jpg" alt="Resort View 3"
+                                        class="img-fluid rounded shadow-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- /Resort overview -->
+
+        <!-- Room list section -->
+        <section class="margin_120_95 bg_white" id="rooms_section">
+            <div class="container">
+                <div class="title center mb-5">
+                    <small>Choose your perfect stay</small>
+                    <h2>Our Luxury Accommodations</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="hotel-detail.html" class="box_cat_rooms">
+                            <figure>
+                                <div class="background-image" data-background="url(img/rooms/1.jpg)"></div>
+                            </figure>
+                            <div class="info">
+                                <small>From $199/night</small>
+                                <h3>Deluxe Ocean View</h3>
+                                <span>View Details</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="hotel-detail.html" class="box_cat_rooms">
+                            <figure>
+                                <div class="background-image" data-background="url(img/rooms/2.jpg)"></div>
+                            </figure>
+                            <div class="info">
+                                <small>From $299/night</small>
+                                <h3>Premium Suite</h3>
+                                <span>View Details</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="hotel-detail.html" class="box_cat_rooms">
+                            <figure>
+                                <div class="background-image" data-background="url(img/rooms/3.jpg)"></div>
+                            </figure>
+                            <div class="info">
+                                <small>From $499/night</small>
+                                <h3>Beachfront Villa</h3>
+                                <span>View Details</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="hotel-detail.html" class="box_cat_rooms">
+                            <figure>
+                                <div class="background-image" data-background="url(img/rooms/4.jpg)"></div>
+                            </figure>
+                            <div class="info">
+                                <small>From $399/night</small>
+                                <h3>Executive Suite</h3>
+                                <span>View Details</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="hotel-detail.html" class="box_cat_rooms">
+                            <figure>
+                                <div class="background-image" data-background="url(img/rooms/5.jpg)"></div>
+                            </figure>
+                            <div class="info">
+                                <small>From $599/night</small>
+                                <h3>Royal Presidential Suite</h3>
+                                <span>View Details</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="hotel-detail.html" class="box_cat_rooms">
+                            <figure>
+                                <div class="background-image" data-background="url(img/rooms/6.jpg)"></div>
+                            </figure>
+                            <div class="info">
+                                <small>From $349/night</small>
+                                <h3>Garden Pool Suite</h3>
+                                <span>View Details</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Room list section -->
+
+
+        <!-- Resort facilities -->
+        <section class="bg_gray margin_120_95 pattern">
+            <div class="container">
+                <div class="title center">
+                    <small>Excellent amenities</small>
+                    <h2>Resort Facilities</h2>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                            <div class="position-relative facility-card">
+                                <img src="img/facilities/pool.jpg" class="card-img-top" alt="Infinity Pool">
+                                <div class="facility-overlay d-flex flex-column justify-content-end p-4">
+                                    <h3 class="text-white mb-2">Infinity Pool</h3>
+                                    <p class="text-white mb-0">Enjoy our stunning infinity pool overlooking the ocean
+                                        with swim-up bar.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                            <div class="position-relative facility-card">
+                                <img src="img/facilities/spa.jpg" class="card-img-top" alt="Wellness Spa">
+                                <div class="facility-overlay d-flex flex-column justify-content-end p-4">
+                                    <h3 class="text-white mb-2">Wellness Spa</h3>
+                                    <p class="text-white mb-0">Rejuvenate with our award-winning spa treatments and
+                                        wellness programs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                            <div class="position-relative facility-card">
+                                <img src="img/facilities/dining.jpg" class="card-img-top" alt="Gourmet Dining">
+                                <div class="facility-overlay d-flex flex-column justify-content-end p-4">
+                                    <h3 class="text-white mb-2">Gourmet Dining</h3>
+                                    <p class="text-white mb-0">Experience exceptional cuisine from our world-class
+                                        restaurants and chefs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                            <div class="position-relative facility-card">
+                                <img src="img/facilities/beach.jpg" class="card-img-top" alt="Private Beach">
+                                <div class="facility-overlay d-flex flex-column justify-content-end p-4">
+                                    <h3 class="text-white mb-2">Private Beach</h3>
+                                    <p class="text-white mb-0">Access to our exclusive private beach with premium
+                                        lounging service.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                            <div class="position-relative facility-card">
+                                <img src="img/facilities/activities.jpg" class="card-img-top" alt="Activities">
+                                <div class="facility-overlay d-flex flex-column justify-content-end p-4">
+                                    <h3 class="text-white mb-2">Activities</h3>
+                                    <p class="text-white mb-0">Enjoy water sports, yoga classes, and curated local
+                                        excursions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                            <div class="position-relative facility-card">
+                                <img src="img/facilities/concierge.jpg" class="card-img-top" alt="Concierge">
+                                <div class="facility-overlay d-flex flex-column justify-content-end p-4">
+                                    <h3 class="text-white mb-2">Concierge</h3>
+                                    <p class="text-white mb-0">Personal concierge service to enhance your stay and
+                                        fulfill special requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Resort facilities -->
+
+        <!-- Location & Maps -->
+        <section class="margin_120_95">
+            <div class="container">
+                <div class="title center mb-5">
+                    <small>Getting here</small>
+                    <h2>Location & Directions</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="map_contact h-100">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.3772362462397!2d115.15698619999999!3d-8.660633899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2471cc9e8f48d%3A0xaac20a8782e7fca!2sBali%2C%20Indonesia!5e0!3m2!1sen!2sus!4v1623394297196!5m2!1sen!2sus"
+                                style="border:0; width: 100%; height: 100%; min-height: 400px;" allowfullscreen=""
+                                loading="lazy"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="contact_info">
+                            <h3>How to reach us</h3>
+                            <p class="mb-4">Marianna Resort is conveniently located on the pristine beaches of Bali,
+                                easily accessible from Ngurah Rai International Airport.</p>
+                            <ul>
+                                <li>
+                                    <i class="bi bi-geo-alt"></i>
+                                    <div class="content">
+                                        <h4>Address</h4>
+                                        <small>Jalan Pantai Kuta No. 88, Kuta, Bali 80361, Indonesia</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="bi bi-car-front"></i>
+                                    <div class="content">
+                                        <h4>From Airport</h4>
+                                        <small>30 minutes by car (25 km). Airport transfers available upon
+                                            request.</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="bi bi-telephone"></i>
+                                    <div class="content">
+                                        <h4>Contact</h4>
+                                        <small>+62 (361) 123-4567 | reservations@marianna-resort.com</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="bi bi-info-circle"></i>
+                                    <div class="content">
+                                        <h4>Transportation Services</h4>
+                                        <small>Private chauffeur, car rental, and tour transportation available.</small>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#0" class="btn_1 mt-3">Get Directions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Location & Maps -->
+    </main>
+    <footer class="revealed">
+        <div class="footer_bg">
+            <div class="gradient_over"></div>
+            <div class="background-image" data-background="url(img/footer.jpg)"></div>
+        </div>
+        <div class="container">
+            <div class="row move_content">
+                <div class="col-lg-4 col-md-12">
+                    <h5>Contacts</h5>
+                    <ul>
+                        <li>PT. Anggun Royal Travel<br>Lombok, Indonesia<br><br></li>
+                        <li><strong><a>info@royaltravel.agency</a></strong></li>
+                        <li><strong><a>+ 62 822 375 865 65</a></strong></li>
+                    </ul>
+                    <div class="social">
+                        <ul>
+                            <li><a href="https://www.instagram.com/royaltravelluxury" target="_blank"><i
+                                        class="bi bi-instagram"></i></a></li>
+                            <li><a href="https://wa.me/+6282237586565" target="_blank"><i
+                                        class="bi bi-whatsapp"></i></a></li>
+                            <li><a href="https://web.facebook.com/profile.php?id=61573090605100" target="_blank"><i
+                                        class="bi bi-facebook"></i></a></li>
+                            <li><a href="https://x.com/RoyalTrvl" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                            </li>
+                            <li><a href="https://www.tiktok.com/@royaltravelluxury" target="_blank"><i
+                                        class="bi bi-tiktok"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 ms-lg-auto">
+                    <h5>Explore</h5>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="hotels.html">Luxury Villas & Resorts</a></li>
+                            <li><a href="yachts.html">Private Yacht Charters</a></li>
+                            <li><a href="jets.html">Private Jet</a></li>
+                            <li><a href="golf.html">Golf Courses</a></li>
+                            <li><a href="news.html">News &amp; Events</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div id="newsletter">
+                        <h5>Newsletter</h5>
+                        <div id="message-newsletter"></div>
+                        <form method="post" action="phpmailer/newsletter_template_email.php" name="newsletter_form"
+                            id="newsletter_form">
+                            <div class="form-group">
+                                <input type="email" name="email_newsletter" id="email_newsletter" class="form-control"
+                                    placeholder="Your email">
+                                <button type="submit" id="submit-newsletter"><i class="bi bi-send"></i></button>
+                            </div>
+                        </form>
+                        <p>Receive latest offers and promos without spam. You can cancel anytime.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/row-->
+        </div>
+        <!--/container-->
+        <div class="copy">
+            <div class="container">
+                Royal Travel Agency
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- /back to top -->
+
+
+    <!-- COMMON SCRIPTS -->
+     <script src="js/config.js"></script>
+
+    <script src="js/common_scripts.js"></script>
+    <script src="js/common_functions.js"></script>
+    <script src="js/datepicker_inline.js"></script>
+    <script src="phpmailer/validate.js"></script>
+
+    <!-- PAGE SPECIFIC SCRIPTS -->
+    <script src="js/hotel-detail.js"></script>
+
+    <script src="js/cart.js"></script>
+
+
+    <!-- Language switcher script -->
+    <script src="js/language.js"></script>
+</body>
+
+</html>

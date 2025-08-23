@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Experience the ultimate luxury with Royal Travel's exclusive yacht charters. Bespoke journeys through exotic islands, personalized service, and unparalleled opulence."
+    />
+    <meta name="author" content="Ansonika" />
+    <title>Royal Travel - Luxury Yacht Experiences</title>
+
+    <!-- GOOGLE WEB FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/vendors.min.css" rel="stylesheet" />
+
+    <!-- YOUR CUSTOM CSS -->
+
+    <link href="css/custom.css" rel="stylesheet" />
+
+    <!-- GOOGLE TRANSLATE SCRIPT -->
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+    <link href="css/style-new.css" rel="stylesheet" />
+    <link href="css/yacht-style.css" rel="stylesheet" />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Add before the custom scripts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    />
+
+    <!-- Add in the head section -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Add before the custom scripts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+  </head>
+
+  <body>
+    <div
+      id="google_translate_element"
+      style="visibility: hidden; height: 0; overflow: hidden"
+    ></div>
+
+    <div id="preloader">
+      <div data-loader="circle-side"></div>
+    </div>
+    <!-- /Page Preload -->
+
+    <div class="layer"></div>
+    <!-- Opacity Mask -->
+
+    <!-- Start Navbar -->
+    <header class="reveal_header">
+      <div class="container-fluid">
+        <div
+          class="row align-items-center d-none d-sm-flex"
+          id="navbar-desktop"
+        >
+          <div class="col-6">
+            <a href="index.html" class="logo_normal"
+              ><img src="img/logo.png" height="84" alt=""
+            /></a>
+            <a href="index.html" class="logo_sticky"
+              ><img src="img/logo_sticky.png" height="84" alt=""
+            /></a>
+          </div>
+          <div class="col-6">
+            <nav>
+              <ul>
+                <li class="language-selector-dropdown">
+                  <a
+                    class="dropdown-toggle"
+                    href="#"
+                    id="languageDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    style="
+                      padding: 10px;
+                      display: inline-block;
+                      text-decoration: none;
+                    "
+                  >
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang-text">EN</span>
+                  </a>
+                  <ul
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="languageDropdownMenuLink"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="changeLanguage('en'); return false;"
+                        data-lang="en"
+                        >English</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="changeLanguage('es'); return false;"
+                        data-lang="es"
+                        >Español</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="cart.html" class="cart-icon-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0" class="menu_open">
+                    <div class="hamburger hamburger--spin">
+                      <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Mobile Navbar -->
+        <div class="d-sm-none" id="navbar-mobile">
+          <!-- Show only on extra-small screens (<576px) -->
+          <div class="row">
+            <div
+              class="col-12 text-center"
+              style="padding-top: 10px; padding-bottom: 5px"
+            >
+              <!-- Logo Row -->
+              <a href="index.html" class="logo_normal"
+                ><img src="img/logo.png" height="70" alt=""
+              /></a>
+              <a href="index.html" class="logo_sticky"
+                ><img src="img/logo_sticky.png" height="70" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="row align-items-center" style="padding-bottom: 10px">
+            <!-- Icon Row -->
+            <div class="col-12">
+              <nav>
+                <ul
+                  style="
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                  "
+                >
+                  <li class="language-selector-dropdown">
+                    <a
+                      class="dropdown-toggle"
+                      href="#"
+                      id="languageDropdownMenuLinkMobile"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      style="
+                        padding: 10px;
+                        display: inline-block;
+                        text-decoration: none;
+                      "
+                    >
+                      <i class="fas fa-globe"></i>
+                      <span id="current-lang-text-mobile">EN</span>
+                    </a>
+                    <ul
+                      class="dropdown-menu dropdown-menu-end"
+                      aria-labelledby="languageDropdownMenuLinkMobile"
+                    >
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          onclick="changeLanguage('en'); return false;"
+                          data-lang="en"
+                          >English</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          onclick="changeLanguage('es'); return false;"
+                          data-lang="es"
+                          >Español</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="cart.html" class="cart-icon-link">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <span class="cart-count">0</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#0" class="menu_open">
+                      <div class="hamburger hamburger--spin">
+                        <div class="hamburger-box">
+                          <div class="hamburger-inner"></div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="panel_menu">
+      <div class="panel__content">
+        <div class="panel__content_wrapper">
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-lg-5">
+                <nav class="wrapper_menu">
+                  <ul>
+                    <li>
+                      <div class="container-item">
+                        <a href="index.html" class="link">Home</a>
+                        <div class="image">
+                          <img src="img/navbar/home.jpg" alt="" />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-item">
+                        <a href="hotels.html">Luxury Villas & Resorts</a>
+                        <div class="image">
+                          <img src="img/navbar/hotel.jpg" alt="" />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-item">
+                        <a href="yachts.html">Private Yacht Charters</a>
+                        <div class="image">
+                          <!-- TODO: change this to yacht -->
+                          <img src="img/navbar/yacht.jpg" alt="" />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-item">
+                        <a href="jets.html">Private Jet</a>
+                        <div class="image">
+                          <img src="img/navbar/jet.png" alt="" />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-item">
+                        <a href="golf.html">Golf Courses</a>
+                        <div class="image">
+                          <img src="img/navbar/golf.jpg" alt="" />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-item">
+                        <a href="about.html">About</a>
+                        <div class="image">
+                          <img src="img/navbar/home.jpg" alt="" />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-item">
+                        <a href="news.html">News & Events</a>
+                        <div class="image">
+                          <img src="img/navbar/home.jpg" alt="" />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-item">
+                        <a href="contacts.html">Contacts</a>
+                        <div class="image">
+                          <img src="img/navbar/home.jpg" alt="" />
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- /wrapper_menu -->
+              </div>
+              <div class="col-lg-6 d-flex align-items-end">
+                <div class="menu_panel_details">
+                  <div class="row justify-content-between">
+                    <div class="col-lg-6 mb-lg-0 mb-4">
+                      <h5>Address</h5>
+                      <p>PT. Anggun Royal Travel<br />Lombok, Indonesia</p>
+                    </div>
+                    <div class="col-lg-5 mb-lg-0 mb-4">
+                      <h5>Contacts</h5>
+                      <div class="contacts">
+                        <ul>
+                          <li><a>+ 62 822 375 865 65</a></li>
+                          <li><a>info@royaltravel.agency</a></li>
+                        </ul>
+                      </div>
+                      <div class="social">
+                        <ul>
+                          <li>
+                            <a
+                              href="https://www.instagram.com/royaltravelluxury"
+                              target="_blank"
+                              ><i class="bi bi-instagram"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://wa.me/+6282237586565"
+                              target="_blank"
+                              ><i class="bi bi-whatsapp"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://web.facebook.com/profile.php?id=61573090605100"
+                              target="_blank"
+                              ><i class="bi bi-facebook"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="https://x.com/RoyalTrvl" target="_blank"
+                              ><i class="bi bi-twitter-x"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.tiktok.com/@royaltravelluxury"
+                              target="_blank"
+                              ><i class="bi bi-tiktok"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Navbar -->
+
+    <main>
+      <div
+        class="hero medium-height jarallax"
+        data-jarallax-video="mp4:./video/transportation.mp4"
+        data-speed="1"
+      >
+        <div
+          class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center animate_hero"
+          data-opacity-mask="rgba(0, 0, 0, 0.5)"
+        >
+          <div class="container">
+            <small class="slide-animated"
+              >Royal Travel Exclusive Collection</small
+            >
+            <h1 class="slide-animated two">
+              Extraordinary Voyages <br />Unparalleled Elegance
+            </h1>
+            <p class="slide-animated three">
+              Set sail on a journey where luxury meets adventure, where every
+              moment <br />is tailored to exceed your highest expectations
+            </p>
+            <br />
+            <a href="#yachts" class="btn_1 slide-animated three"
+              >Explore Our Yachts</a
+            >
+          </div>
+          <div class="mouse_wp slide-animated four">
+            <a href="#first_section" class="btn_scrollto">
+              <div class="mouse"></div>
+            </a>
+          </div>
+          <!-- /mouse_wp -->
+        </div>
+      </div>
+      <!-- /jarallax video background -->
+
+      <!-- Storytelling Journey Section -->
+      <section class="bg_white pattern margin_120_95" id="first_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-right">
+              <div class="title">
+                <small>A Journey Like No Other</small>
+                <h2>The Art of Voyaging</h2>
+              </div>
+              <p class="lead">
+                Embark on a transformative journey through Indonesia's
+                archipelagic wonders, where time slows and memories deepen with
+                each nautical mile.
+              </p>
+              <p>
+                At Royal Travel, we believe a yacht voyage is more than a luxury
+                experience, it's a passage into the extraordinary. As dawn
+                breaks over Bali's volcanic silhouette, your private chef
+                prepares breakfast using ingredients sourced from local markets.
+                By midday, you're diving among Raja Ampat's kaleidoscopic reefs,
+                guided by our marine biologist who reveals secrets of this
+                underwater paradise.
+              </p>
+              <p>
+                As the sun sets, your yacht anchors in a secluded bay where
+                dinner awaits on a torch-lit beach, prepared by your personal
+                chef using the day's fresh catch. This is not merely travel,
+                this is artful living, where every detail is curated to create
+                moments of wonder.
+              </p>
+              <!-- <a href="#destinations" class="btn_1  mt-4">Discover Our Destinations</a> -->
+            </div>
+            <div class="col-lg-5 offset-lg-1" data-aos="fade-left">
+              <div class="journey-gallery">
+                <div class="journey-image main-image">
+                  <img
+                    src="img/landing/yacht-landing-banner.png"
+                    alt="Luxury Yacht Experience"
+                    class="img-fluid rounded shadow"
+                  />
+                </div>
+                <div class="journey-image secondary-image mt-4 d-flex">
+                  <div class="me-3">
+                    <img
+                      src="img/island/bali/yacht-1.jpg"
+                      alt="Sunset Dining"
+                      class="img-fluid rounded shadow"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="img/island/bali/yacht-2.jpg"
+                      alt="Island Exploration"
+                      class="img-fluid rounded shadow"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Storytelling Journey Section -->
+
+      <div class="pinned-image pinned-image--medium">
+        <div class="pinned-image__container" id="section_video">
+          <video loop="loop" muted="muted" id="video_home">
+            <source src="video/banner-home.mp4" type="video/mp4" />
+          </video>
+          <div class="pinned-image__container-overlay"></div>
+        </div>
+        <div class="pinned_over_content">
+          <div class="title white">
+            <small data-cue="slideInUp" data-delay="200"
+              >A WINDOW INTO BALI'S EXCLUSIVE ELEGANCE</small
+            >
+            <h2 data-cue="slideInUp" data-delay="300">
+              Immerse Yourself in<br />Unparalleled Relaxation
+            </h2>
+          </div>
+        </div>
+      </div>
+      <!-- /pinned content -->
+
+      <!-- Destinations Section with Interactive Map -->
+      <section
+        class="bg_gray pattern destinations-section margin_120_95"
+        id="destinations"
+      >
+        <div class="container">
+          <div class="title center">
+            <small>Discover Exotic Paradises</small>
+            <h2>Archipelagic Wonders Await</h2>
+          </div>
+
+          <!-- Added Destination Narrative Content -->
+          <div class="row">
+            <div class="col-lg-10 offset-lg-1 text-center" data-aos="fade-up">
+              <p class="lead destination-intro">
+                Indonesia's archipelago unfolds like chapters in an epic tale,
+                each island a world unto itself, each voyage a story waiting to
+                be written.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="interactive-map-container" data-aos="fade-up">
+                <div class="destinations-map">
+                  <img
+                    src="img/yachts/indonesia-map.png"
+                    alt="Indonesia Islands Map"
+                    class="img-fluid"
+                  />
+                  <div class="map-point" data-location="bali">
+                    <div class="point-pulse"></div>
+                    <div class="point-marker"></div>
+                    <div class="destination-popup bali-popup">
+                      <h4>Bali</h4>
+                      <p>
+                        Sail through the mystical Island of Gods, where sacred
+                        temples perch on dramatic cliffs and hidden beaches
+                        await your exclusive footprints.
+                      </p>
+                      <a href="#" class="btn_2 learn-more"
+                        >Explore Bali <i class="bi bi-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="map-point" data-location="komodo">
+                    <div class="point-pulse"></div>
+                    <div class="point-marker"></div>
+                    <div class="destination-popup komodo-popup">
+                      <h4>Komodo Islands</h4>
+                      <p>
+                        Navigate the realm of ancient dragons, where pink
+                        beaches meet turquoise waters and underwater currents
+                        reveal nature's most spectacular marine theater.
+                      </p>
+                      <a href="#" class="btn_2 learn-more"
+                        >Explore Komodo <i class="bi bi-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="map-point" data-location="raja-ampat">
+                    <div class="point-pulse"></div>
+                    <div class="point-marker"></div>
+                    <div class="destination-popup raja-popup">
+                      <h4>Raja Ampat</h4>
+                      <p>
+                        Venture into the crown jewel of marine biodiversity,
+                        where limestone karsts rise from crystal waters and over
+                        1,500 fish species dance beneath your private yacht.
+                      </p>
+                      <a href="#" class="btn_2 learn-more"
+                        >Explore Raja Ampat <i class="bi bi-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="map-caption text-center mt-4" data-aos="fade-up">
+                  <p>
+                    <em
+                      >Hover over the pulsing markers to discover the treasures
+                      of each destination. Each point on this map represents not
+                      just a location, but a world of experiences waiting to be
+                      discovered.</em
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Journey Suggestion -->
+          <div class="row mt-5">
+            <div class="col-lg-12">
+              <div class="journey-suggestion" data-aos="fade-up">
+                <div class="row align-items-center">
+                  <div class="col-md-8">
+                    <h3>Suggested Voyage: The Indonesian Odyssey</h3>
+                    <p>
+                      A 14-day expedition from Bali to Raja Ampat, traversing
+                      the Komodo Islands. Experience the full spectrum of
+                      Indonesia's maritime wonders in one extraordinary journey.
+                    </p>
+                    <ul class="journey-highlights">
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Witness Komodo
+                        dragons in their natural habitat
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Dive in the world's
+                        most biodiverse coral reefs
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Experience
+                        traditional ceremonies in remote villages
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle"></i> Enjoy sunset dinners
+                        on private pink beaches
+                      </li>
+                    </ul>
+                    <a href="#" id="viewYachtScheduleBtn" class="btn_1 mt-3"
+                      >View This Journey</a
+                    >
+                  </div>
+                  <div class="col-md-4 mt-4 mt-md-0">
+                    <div class="journey-badge">
+                      <div class="badge-content">
+                        <span class="badge-label">SIGNATURE</span>
+                        <span class="badge-title">VOYAGE</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Destinations Section -->
+
+      <!-- Yacht Showcase Section -->
+      <section
+        class="margin_120_95 yacht-collection-section bg_white"
+        id="yachts"
+      >
+        <div class="container">
+          <div class="title center">
+            <small>Our Exclusive Fleet</small>
+            <h2>Vessels of Distinction</h2>
+          </div>
+
+          <div class="row yacht-filters" data-aos="fade-up">
+            <div class="col-lg-12">
+              <div class="filters-container">
+                <div class="filter-group">
+                  <label>Destination</label>
+                  <select
+                    class="form-select yacht-filter"
+                    data-filter="destination"
+                  >
+                    <option value="all">All Destinations</option>
+                    <option value="bali">Bali</option>
+                    <option value="komodo">Komodo Islands</option>
+                    <option value="raja-ampat">Raja Ampat</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <label>Yacht Size</label>
+                  <select class="form-select yacht-filter" data-filter="size">
+                    <option value="all">All Sizes</option>
+                    <option value="small">Small (up to 20m)</option>
+                    <option value="medium">Medium (20-35m)</option>
+                    <option value="large">Large (35m+)</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <label>Experience</label>
+                  <select
+                    class="form-select yacht-filter"
+                    data-filter="experience"
+                  >
+                    <option value="all">All Experiences</option>
+                    <option value="romance">Romance</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="family">Family</option>
+                    <option value="leisure">Leisure</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 yacht-grid"
+            data-aos="fade-up"
+          >
+            <!-- Yacht items will be dynamically inserted here by JavaScript -->
+          </div>
+
+          <div class="pagination__wrapper">
+            <!-- Pagination will be dynamically inserted here by JavaScript -->
+            <br />
+          </div>
+        </div>
+      </section>
+      <!-- /Yacht Showcase Section -->
+
+      <!-- How It Works -->
+      <div class="home section-4 how-it-works">
+        <div class="container margin_120_95">
+          <div class="title text-center mb-5">
+            <small data-cue="slideInUp">Your Journey Begins Here</small>
+            <h2 data-cue="slideInUp" data-delay="100">
+              How to Use Our Website
+            </h2>
+            <p class="lead" data-cue="slideInUp" data-delay="200">
+              Follow these simple steps to plan your luxury experience with
+              Royal Travel.
+            </p>
+          </div>
+
+          <div class="row process-steps" data-cues="slideInUp" data-delay="300">
+            <div class="col-lg-3">
+              <div class="process-box" data-cue="slideInUp">
+                <span class="step-number">01</span>
+                <i class="bi bi-search"></i>
+                <h3>View Our Services</h3>
+                <p>
+                  Explore our range of luxury offerings, including exclusive
+                  hotels, private yachts, jets, and golf courses.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="process-box" data-cue="slideInUp" data-delay="200">
+                <span class="step-number">02</span>
+                <i class="bi bi-cart-plus"></i>
+                <h3>Add to Cart</h3>
+                <p>
+                  Select your desired services and add them to your cart to
+                  build your personalized itinerary.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="process-box" data-cue="slideInUp" data-delay="400">
+                <span class="step-number">03</span>
+                <i class="bi bi-send-check"></i>
+                <h3>Submit Your Request</h3>
+                <p>
+                  Proceed to your cart, review your selections, and submit your
+                  request for a bespoke travel plan.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="process-box" data-cue="slideInUp" data-delay="600">
+                <span class="step-number">04</span>
+                <i class="bi bi-headset"></i>
+                <h3>Our Staff Will Contact You</h3>
+                <p>
+                  Once we receive your request, our dedicated staff will contact
+                  you to finalize the details and confirm your booking.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <hr class="mt-5 mb-5" />
+
+          <div class="row justify-content-center pt-4">
+            <div class="col-lg-8 text-center justify-content-center">
+              <div data-cue="slideInUp justify-content-center">
+                <div class="title">
+                  <small>Alternatively</small>
+                  <h2>Prefer a Direct Consultation?</h2>
+                </div>
+                <p>
+                  If you have specific requirements or prefer to discuss your
+                  travel plans directly with our VIP concierge, we're here to
+                  assist. Contact us for a personalized planning experience.
+                </p>
+                <p class="">
+                  <strong>Call our VIP Concierge:</strong>
+                  <a href="tel:+6282237586565">+62 822 375 865 65</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /container -->
+    </main>
+    <footer class="revealed">
+      <div class="footer_bg">
+        <div class="gradient_over"></div>
+        <div
+          class="background-image"
+          data-background="url(img/footer.jpg)"
+        ></div>
+      </div>
+      <div class="container">
+        <div class="row move_content">
+          <div class="col-lg-4 col-md-12">
+            <h5>Contacts</h5>
+            <ul>
+              <li>
+                PT. Anggun Royal Travel<br />Lombok, Indonesia<br /><br />
+              </li>
+              <li>
+                <strong><a>info@royaltravel.agency</a></strong>
+              </li>
+              <li>
+                <strong><a>+ 62 822 375 865 65</a></strong>
+              </li>
+            </ul>
+            <div class="social">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.instagram.com/royaltravelluxury"
+                    target="_blank"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://wa.me/+6282237586565" target="_blank"
+                    ><i class="bi bi-whatsapp"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://web.facebook.com/profile.php?id=61573090605100"
+                    target="_blank"
+                    ><i class="bi bi-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://x.com/RoyalTrvl" target="_blank"
+                    ><i class="bi bi-twitter-x"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.tiktok.com/@royaltravelluxury"
+                    target="_blank"
+                    ><i class="bi bi-tiktok"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 ms-lg-auto">
+            <h5>Explore</h5>
+            <div class="footer_links">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="hotels.html">Luxury Villas & Resorts</a></li>
+                <li><a href="yachts.html">Private Yacht Charters</a></li>
+                <li><a href="jets.html">Private Jet</a></li>
+                <li><a href="golf.html">Golf Courses</a></li>
+                <li><a href="news.html">News &amp; Events</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div id="newsletter">
+              <h5>Newsletter</h5>
+              <div id="message-newsletter"></div>
+              <form
+                method="post"
+                action="phpmailer/newsletter_template_email.php"
+                name="newsletter_form"
+                id="newsletter_form"
+              >
+                <div class="form-group">
+                  <input
+                    type="email"
+                    name="email_newsletter"
+                    id="email_newsletter"
+                    class="form-control"
+                    placeholder="Your email"
+                  />
+                  <button type="submit" id="submit-newsletter">
+                    <i class="bi bi-send"></i>
+                  </button>
+                </div>
+              </form>
+              <p>
+                Receive latest offers and promos without spam. You can cancel
+                anytime.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--/row-->
+      </div>
+      <!--/container-->
+      <div class="copy">
+        <div class="container">Royal Travel Agency</div>
+      </div>
+    </footer>
+    <!-- /footer -->
+
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <!-- /back to top -->
+
+    <!-- COMMON SCRIPTS -->
+    <!-- If not already included in common_scripts.js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/config.js"></script>
+
+    <script src="js/common_scripts.js"></script>
+    <script src="js/common_functions.js"></script>
+    <!-- <script src="js/yacht.js"></script> -->
+    <script src="phpmailer/validate.js"></script>
+
+    <!-- Additional Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Initialize custom scripts last -->
+    <script src="js/yacht-script.js"></script>
+
+    <!-- DATA AND RENDERING SCRIPT FOR YACHTS PAGE -->
+    <!-- <script src="yacht-data.js"></script> -->
+
+    <script src="js/cart.js"></script>
+
+    <!-- Language switcher script -->
+    <script src="js/language.js"></script>
+
+    <script src="js/coming-soon-modal.js"></script>
+  </body>
+</html>

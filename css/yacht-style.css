@@ -1,0 +1,1578 @@
+/* YACHT EXPERIENCE - CUSTOM STYLING
+================================================== */
+
+/* Custom Colors & Accents */
+:root {
+    --yacht-gold: #d4af37;
+    --yacht-navy: #0a1c2e;
+    --yacht-teal: #11717b;
+    --yacht-sand: #f5f1e8;
+    --yacht-coral: #e75f4b;
+}
+
+/* Custom Button Styles */
+/* .btn_yacht {
+    background: linear-gradient(135deg, var(--yacht-gold), #c19b3c);
+    border: none;
+    color: #fff;
+    padding: 12px 28px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.25);
+    transition: all 0.3s ease;
+}
+
+.btn_yacht:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
+    color: #fff;
+} */
+
+/* Destinations Section */
+.destinations-section {
+    position: relative;
+}
+
+.interactive-map-container {
+    position: relative;
+    margin-top: 50px;
+}
+
+.destinations-map {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(10, 28, 46, 0.1);
+}
+
+.destinations-map::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.destinations-map img {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.map-point {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.map-point[data-location="bali"] {
+    top: 45%;
+    left: 30%;
+}
+
+.map-point[data-location="komodo"] {
+    top: 60%;
+    left: 45%;
+}
+
+.map-point[data-location="raja-ampat"] {
+    top: 35%;
+    left: 75%;
+}
+
+.point-pulse {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--yacht-gold);
+    opacity: 0.6;
+    animation: pulse 2s infinite;
+}
+
+.point-marker {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: var(--yacht-gold);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #fff;
+    z-index: 3;
+}
+
+.destination-popup {
+    position: absolute;
+    width: 280px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(10, 28, 46, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+.bali-popup {
+    top: -120px;
+    left: -120px;
+}
+
+.komodo-popup {
+    top: -120px;
+    left: -120px;
+}
+
+.raja-popup {
+    top: -120px;
+    left: -250px;
+}
+
+.map-point:hover .destination-popup {
+    opacity: 1;
+    visibility: visible;
+}
+
+.destination-popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.destination-popup h4 {
+    color: var(--yacht-navy);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.destination-popup p {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.7;
+    }
+
+    70% {
+        transform: scale(1.7);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* Yacht Collection Section */
+.yacht-filters {
+    margin-bottom: 40px;
+}
+
+.filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(10, 28, 46, 0.05);
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--yacht-navy);
+    font-weight: 500;
+}
+
+.form-select {
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    padding: 10px 15px;
+    width: 100%;
+    color: #555;
+}
+
+.yacht-grid {
+    margin-top: 20px;
+}
+
+.yacht-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(10, 28, 46, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.yacht-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(10, 28, 46, 0.15);
+}
+
+.yacht-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-bottom: 3px solid var(--yacht-gold);
+}
+
+.yacht-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    z-index: 1;
+    pointer-events: none;
+}
+
+.yacht-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.yacht-card:hover .yacht-image img {
+    transform: scale(1.05);
+}
+
+.yacht-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, var(--yacht-gold), #c19b3c);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    z-index: 2;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.yacht-detail {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-top: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.yacht-detail::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 25px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    border-left: 1px solid #f0f0f0;
+    border-top: 1px solid #f0f0f0;
+    z-index: 2;
+}
+
+.yacht-detail h4 {
+    color: var(--yacht-navy);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.yacht-detail h4:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--yacht-gold);
+}
+
+.yacht-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.yacht-specs span {
+    font-size: 0.85rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+.yacht-specs span i {
+    color: var(--yacht-gold);
+    margin-right: 5px;
+}
+
+.yacht-detail p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.yacht-detail .btn_1 {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* Final CTA */
+.final-cta {
+    background: linear-gradient(rgba(10, 28, 46, 0.8), rgba(10, 28, 46, 0.8)), url('../img/yachts/cta-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+.cta-title {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 767px) {
+    .cta-title {
+        font-size: 1.8rem;
+    }
+
+    .cta-text {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .filters-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .yacht-image {
+        height: 220px;
+    }
+
+    .yacht-detail::before {
+        left: 20px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .destination-popup {
+        width: 220px;
+    }
+
+    .bali-popup,
+    .komodo-popup,
+    .raja-popup {
+        transform: translate(-50%, -100%);
+    }
+
+    .yacht-image {
+        height: 200px;
+    }
+
+    .yacht-detail {
+        padding: 20px 15px;
+    }
+
+    .yacht-detail h4 {
+        font-size: 1.2rem;
+    }
+
+    .yacht-specs {
+        gap: 10px;
+        padding: 8px 0;
+    }
+
+    .yacht-detail::before {
+        left: 15px;
+        width: 14px;
+        height: 14px;
+        top: -7px;
+    }
+
+    .cta-title {
+        font-size: 1.8rem;
+    }
+
+    .cta-text {
+        font-size: 1rem;
+    }
+}
+
+/* Journey Storytelling Section Styles */
+.journey-gallery {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.journey-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.journey-image img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.main-image {
+    margin-bottom: 20px;
+}
+
+.secondary-image img {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Testimonial Section Styles */
+.testimonial-carousel {
+    position: relative;
+    padding: 50px 60px;
+    overflow: visible;
+}
+
+.testimonial-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin: 20px 10px;
+    position: relative;
+    transition: all 0.3s ease;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.quote-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: var(--yacht-gold);
+    opacity: 0.3;
+}
+
+.testimonial-text {
+    font-family: inherit;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #333;
+    flex-grow: 1;
+}
+
+.guest-info {
+    margin-top: auto;
+}
+
+.guest-info h5 {
+    margin-bottom: 5px;
+    color: #222;
+    font-weight: 600;
+}
+
+.guest-info p {
+    color: var(--yacht-gold);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 991px) {
+    .testimonial-carousel {
+        padding: 50px 30px;
+    }
+
+    .testimonial-card {
+        padding: 30px;
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 767px) {
+    .testimonial-carousel {
+        padding: 50px 15px;
+    }
+
+    .testimonial-card {
+        padding: 25px;
+        min-height: 200px;
+        margin: 15px 5px;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+    }
+}
+
+/* Map Caption */
+.map-caption {
+    font-family: inherit;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Journey Suggestion */
+.journey-suggestion {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    border-left: 5px solid var(--yacht-gold);
+}
+
+.journey-suggestion h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #222;
+    font-weight: 600;
+}
+
+.journey-suggestion p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.journey-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.journey-highlights li {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.journey-highlights li i {
+    color: var(--yacht-gold);
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.journey-badge {
+    background: linear-gradient(135deg, var(--yacht-gold), #c19b3c);
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(193, 155, 60, 0.3);
+    transform: rotate(12deg);
+}
+
+.badge-content {
+    text-align: center;
+    color: #fff;
+    transform: rotate(-12deg);
+}
+
+.badge-label {
+    display: block;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.badge-title {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 991px) {
+    .journey-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-badge {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 767px) {
+    .journey-suggestion {
+        padding: 30px 20px;
+    }
+
+    .journey-suggestion h3 {
+        font-size: 1.5rem;
+    }
+
+    .map-caption {
+        font-size: 0.95rem;
+    }
+}
+
+/* Testimonial Carousel Custom Navigation */
+.testimonial-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+    left: 0;
+    right: 0;
+}
+
+.testimonial-carousel .owl-nav button {
+    background: rgba(212, 175, 55, 0.1) !important;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+    position: absolute;
+}
+
+.testimonial-carousel .owl-nav button.owl-prev {
+    left: 0;
+}
+
+.testimonial-carousel .owl-nav button.owl-next {
+    right: 0;
+}
+
+.testimonial-carousel .owl-nav button:hover {
+    background: rgba(212, 175, 55, 0.2) !important;
+    opacity: 1;
+}
+
+.testimonial-carousel .owl-nav button i {
+    color: var(--yacht-gold);
+    font-size: 1.5rem;
+}
+
+/* Remove Testimonial Carousel Dots Styles */
+.testimonial-carousel .owl-dots {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .testimonial-carousel .owl-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .testimonial-carousel .owl-nav button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .testimonial-carousel .owl-nav button i {
+        font-size: 1.2rem;
+    }
+}
+
+/* Yacht Detail Page Styles */
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 3;
+    animation: bounce 2s infinite;
+}
+
+.hero-scroll-indicator a {
+    color: #fff;
+    font-size: 2rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.hero-scroll-indicator a:hover {
+    opacity: 1;
+    transform: translateY(5px);
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.yacht-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.yacht-tagline {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+/* Yacht Information Section */
+.yacht-info-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #222;
+}
+
+.yacht-description {
+    padding-right: 30px;
+}
+
+.yacht-description .lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.key-details-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.key-details-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.details-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.details-list li i {
+    font-size: 1.5rem;
+    color: #8b784a;
+    margin-right: 15px;
+}
+
+.detail-content {
+    flex: 1;
+}
+
+.detail-title {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 3px;
+}
+
+.detail-info {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 3rem;
+}
+
+.gallery-grid {
+    margin-top: 30px;
+}
+
+.gallery-item {
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-link img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: #fff;
+}
+
+.gallery-overlay i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.gallery-overlay h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.gallery-link:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-link:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Pricing & Booking Section */
+.booking-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.pricing-table {
+    margin-bottom: 50px;
+}
+
+.pricing-table table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pricing-table thead {
+    background-color: #8b784a;
+    color: #fff;
+}
+
+.pricing-table th {
+    padding: 20px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.pricing-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.pricing-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.pricing-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.booking-form-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.booking-form-container h3 {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.booking-form-container .form-group {
+    margin-bottom: 20px;
+}
+
+.booking-form-container label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.booking-form-container .form-control {
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+}
+
+.booking-form-container textarea.form-control {
+    height: auto;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+
+.testimonial-item {
+    padding: 20px;
+}
+
+.testimonial-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.testimonial-content p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.testimonial-author h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.testimonial-author p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .yacht-title {
+        font-size: 3.5rem;
+    }
+
+    .yacht-tagline {
+        font-size: 1.25rem;
+    }
+
+    .yacht-description {
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .hero-section {
+        height: 60vh;
+        min-height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 55vh;
+        min-height: 400px;
+    }
+
+    .yacht-title {
+        font-size: 2.75rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .booking-form-container {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        height: 50vh;
+        min-height: 350px;
+    }
+
+    .yacht-title {
+        font-size: 2.25rem;
+    }
+
+    .yacht-tagline {
+        font-size: 1rem;
+    }
+}
+
+/* Schedule Section */
+.schedule-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+/* Schedule Tabs */
+.schedule-tabs {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.schedule-tabs .nav-tabs {
+    border-bottom: none;
+    padding: 0 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.schedule-tabs .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: #555;
+    font-weight: 500;
+    padding: 15px 20px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.schedule-tabs .nav-link:hover {
+    color: #8b784a;
+}
+
+.schedule-tabs .nav-link.active {
+    color: #8b784a;
+    border-bottom: 3px solid #8b784a;
+    background-color: transparent;
+}
+
+.schedule-tabs .tab-content {
+    padding: 30px;
+}
+
+/* Month navigation */
+.month-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.month-navigation button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+    padding: 10px;
+    transition: all 0.3s ease;
+    z-index: 20;
+    position: relative;
+}
+
+.month-navigation button:hover {
+    color: #c19b76;
+    transform: scale(1.2);
+}
+
+.month-navigation button:focus {
+    outline: none;
+}
+
+.month-navigation h3 {
+    margin: 0 1.5rem;
+    font-size: 1.75rem;
+}
+
+/* Make sure buttons are clickable by adding important */
+.prev-month,
+.next-month {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+}
+
+/* Add debug outline to verify button boundaries */
+
+
+/* Month Picker */
+.month-picker-container {
+    position: relative;
+    margin-left: auto;
+}
+
+.month-picker {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;
+    width: 180px;
+    text-align: center;
+}
+
+.month-picker-container i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8b784a;
+    pointer-events: none;
+}
+
+/* Month Picker Calendar */
+.datepicker-months .table-condensed {
+    width: 100%;
+}
+
+.datepicker-months .month {
+    padding: 10px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.datepicker-months .month:hover {
+    background-color: rgba(139, 120, 74, 0.1);
+}
+
+.datepicker-months .month.active {
+    background-color: #8b784a;
+    color: #fff;
+}
+
+.datepicker-months .datepicker-switch {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Schedule Table */
+.schedule-table {
+    margin-top: 30px;
+}
+
+.schedule-table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.schedule-table th {
+    background-color: #f5f5f5;
+    padding: 15px;
+    font-weight: 500;
+    color: #444;
+    border-bottom: 1px solid #eee;
+}
+
+.schedule-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.schedule-table tr:last-child td {
+    border-bottom: none;
+}
+
+.schedule-table tr {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.schedule-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.schedule-table tr.available {
+    background-color: rgba(139, 195, 74, 0.05);
+}
+
+.schedule-table tr.booked {
+    background-color: rgba(233, 30, 99, 0.05);
+}
+
+.schedule-table tr.maintenance {
+    background-color: rgba(158, 158, 158, 0.05);
+    cursor: default;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.status-badge.available {
+    background-color: #8bc34a;
+}
+
+.status-badge.booked {
+    background-color: #e91e63;
+}
+
+.status-badge.maintenance {
+    background-color: #9e9e9e;
+}
+
+.btn-book-now,
+.btn-waitlist {
+    display: inline-block;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-book-now {
+    background-color: #8b784a;
+    color: #fff;
+}
+
+.btn-book-now:hover {
+    background-color: #6a5936;
+    color: #fff;
+}
+
+.btn-waitlist {
+    background-color: transparent;
+    color: #8b784a;
+    border: 1px solid #8b784a;
+}
+
+.btn-waitlist:hover {
+    background-color: rgba(139, 120, 74, 0.1);
+}
+
+span.unavailable {
+    color: #9e9e9e;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.voyage-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    margin: 16px;
+}
+
+.voyage-image {
+    position: relative;
+    height: 250px;
+}
+
+.voyage-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.voyage-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #8b784a;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.voyage-details {
+    padding: 25px;
+}
+
+.voyage-details h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.voyage-info {
+    margin-bottom: 15px;
+}
+
+.voyage-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.voyage-info p i {
+    color: #8b784a;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.voyage-description {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Event Cards */
+.events-content {
+    padding: 15px 0;
+}
+
+.event-type-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.event-type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.event-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(139, 120, 74, 0.1);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.event-icon i {
+    font-size: 2rem;
+    color: #8b784a;
+}
+
+.event-type-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.event-type-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.event-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+    text-align: left;
+}
+
+.event-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.event-features li i {
+    color: #8bc34a;
+    margin-right: 10px;
+}
+
+.event-type-card .btn_1 {
+    margin-top: auto;
+    align-self: center;
+}
+
+/* Responsive adjustments for Schedule */
+@media (max-width: 991px) {
+    .schedule-tabs .nav-link {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+
+    .schedule-tabs .tab-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .voyage-card {
+        flex-direction: column;
+    }
+
+    .voyage-image {
+        height: 200px;
+    }
+
+    .voyage-details {
+        padding: 20px;
+    }
+
+    .event-type-card {
+        margin-bottom: 30px;
+    }
+}

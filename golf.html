@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"> <meta name="color-scheme" content="light">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Royal Travel's exclusive golf experiences. Play on the world's most breathtaking courses, where nature meets prestige and luxury knows no bounds.">
+    <meta name="author" content="Royal Travel">
+    <title>Luxury Golf Experiences | Royal Travel</title>
+
+    <!-- GOOGLE WEB FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Montserrat:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <link href="css/style-new.css" rel="stylesheet">
+    <link href="css/vendors.min.css" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+
+    <link href="css/custom.css" rel="stylesheet">
+
+
+    <!-- GOOGLE TRANSLATE SCRIPT -->
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <link href="css/golf.css" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div id="google_translate_element" style="visibility:hidden; height:0; overflow:hidden;"></div>
+
+    <div id="preloader">
+        <div data-loader="circle-side"></div>
+    </div><!-- /Page Preload -->
+
+    <div class="layer"></div><!-- Opacity Mask -->
+
+    <!-- Start Navbar -->
+    <header class="reveal_header">
+        <div class="container-fluid">
+            <div class="row align-items-center d-none d-sm-flex" id="navbar-desktop">
+                <div class="col-6">
+                    <a href="index.html" class="logo_normal"><img src="img/logo.png" height="84" alt=""></a>
+                    <a href="index.html" class="logo_sticky"><img src="img/logo_sticky.png" height="84" alt=""></a>
+                </div>
+                <div class="col-6">
+                    <nav>
+                        <ul>
+                            <li class="language-selector-dropdown">
+                                <a class="dropdown-toggle" href="#" id="languageDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="padding: 10px; display: inline-block; text-decoration: none;">
+                                    <i class="fas fa-globe"></i> <span id="current-lang-text">EN</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('en'); return false;"
+                                            data-lang="en">English</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('es'); return false;"
+                                            data-lang="es">Español</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="cart.html" class="cart-icon-link">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span class="cart-count">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0" class="menu_open">
+                                    <div class="hamburger hamburger--spin">
+                                        <div class="hamburger-box">
+                                            <div class="hamburger-inner"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Mobile Navbar -->
+            <div class="d-sm-none" id="navbar-mobile"> <!-- Show only on extra-small screens (<576px) -->
+                <div class="row">
+                    <div class="col-12 text-center" style="padding-top: 10px; padding-bottom: 5px;"> <!-- Logo Row -->
+                        <a href="index.html" class="logo_normal"><img src="img/logo.png" height="70" alt=""></a>
+                        <a href="index.html" class="logo_sticky"><img src="img/logo_sticky.png" height="70" alt=""></a>
+                    </div>
+                </div>
+                <div class="row align-items-center" style="padding-bottom: 10px;"> <!-- Icon Row -->
+                    <div class="col-12">
+                        <nav>
+                            <ul
+                                style="display: flex; justify-content: space-around; align-items: center; list-style: none; padding: 0; margin: 0;">
+                                <li class="language-selector-dropdown">
+                                    <a class="dropdown-toggle" href="#" id="languageDropdownMenuLinkMobile"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                        style="padding: 10px; display: inline-block; text-decoration: none;">
+                                        <i class="fas fa-globe"></i> <span id="current-lang-text-mobile">EN</span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end"
+                                        aria-labelledby="languageDropdownMenuLinkMobile">
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="changeLanguage('en'); return false;" data-lang="en">English</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="changeLanguage('es'); return false;" data-lang="es">Español</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="cart.html" class="cart-icon-link">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        <span class="cart-count">0</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0" class="menu_open">
+                                        <div class="hamburger hamburger--spin">
+                                            <div class="hamburger-box">
+                                                <div class="hamburger-inner"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="panel_menu">
+        <div class="panel__content">
+            <div class="panel__content_wrapper">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-5">
+                            <nav class="wrapper_menu">
+                                <ul>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="index.html" class="link">Home</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="hotels.html">Luxury Villas & Resorts</a>
+                                            <div class="image">
+                                                <img src="img/navbar/hotel.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="yachts.html">Private Yacht Charters</a>
+                                            <div class="image">
+                                                <!-- TODO: change this to yacht -->
+                                                <img src="img/navbar/yacht.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="jets.html">Private Jet</a>
+                                            <div class="image">
+                                                <img src="img/navbar/jet.png" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="golf.html">Golf Courses</a>
+                                            <div class="image">
+                                                <img src="img/navbar/golf.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="about.html">About</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="news.html">News & Events</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="contacts.html">Contacts</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav><!-- /wrapper_menu -->
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-end">
+                            <div class="menu_panel_details">
+                                <div class="row justify-content-between">
+                                    <div class="col-lg-6 mb-lg-0 mb-4">
+                                        <h5>Address</h5>
+                                        <p>PT. Anggun Royal Travel<br>Lombok, Indonesia</p>
+
+                                    </div>
+                                    <div class="col-lg-5 mb-lg-0 mb-4">
+                                        <h5>Contacts</h5>
+                                        <div class="contacts">
+                                            <ul>
+                                                <li><a>+ 62 822 375 865 65</a></li>
+                                                <li><a>info@royaltravel.agency</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social">
+                                            <ul>
+                                                <li><a href="https://www.instagram.com/royaltravelluxury"
+                                                        target="_blank"><i class="bi bi-instagram"></i></a></li>
+                                                <li><a href="https://wa.me/+6282237586565" target="_blank"><i
+                                                            class="bi bi-whatsapp"></i></a></li>
+                                                <li><a href="https://web.facebook.com/profile.php?id=61573090605100"
+                                                        target="_blank"><i class="bi bi-facebook"></i></a></li>
+                                                <li><a href="https://x.com/RoyalTrvl" target="_blank"><i
+                                                            class="bi bi-twitter-x"></i></a></li>
+                                                <li><a href="https://www.tiktok.com/@royaltravelluxury"
+                                                        target="_blank"><i class="bi bi-tiktok"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar -->
+
+    <main>
+        <div class="hero medium-height jarallax" data-jarallax-video="mp4:./video/golf.mp4" data-speed="1">
+            <div class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center animate_hero"
+                data-opacity-mask="rgba(0, 0, 0, 0.5)">
+                <div class="container">
+                    <small class="slide-animated">Royal Travel Exclusive Collection</small>
+                    <h1 class="slide-animated one">The Art of Golf, Redefined</h1>
+                    <p class="slide-animated two">Play on the world's most breathtaking courses, where nature<br>meets
+                        prestige and luxury knows no bounds.</p>
+                    <br>
+                    <a href="#booking_section" class="btn_1 slide-animated three">Explore Courses</a>
+                </div>
+                <div class="mouse_wp slide-animated four">
+                    <a href="#first_section" class="btn_scrollto">
+                        <div class="mouse"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Golf Story Section -->
+        <section class="golf-story">
+            <div class="container">
+                <div class="row align-items-stretch">
+                    <div class="col-lg-6">
+                        <div class="golf-story-content">
+                            <h2>Golf, The Royal Way</h2>
+                            <p>At Royal Travel, we believe golf is more than just a game, it's a statement of
+                                sophistication, a pursuit of excellence, and an opportunity to connect with nature's
+                                most stunning landscapes.</p>
+
+                            <div class="golf-quote">
+                                "More than a game, it's a journey into luxury."
+                            </div>
+
+                            <p>Challenge yourself on championship courses crafted by legends, surrounded by the world's
+                                most breathtaking vistas. From cliff-side fairways overlooking azure waters to pristine
+                                greens set against volcanic highlands, every hole presents both a sporting challenge and
+                                a feast for the senses.</p>
+
+                            <p>With Royal Travel, every swing is an experience, every course a masterpiece. Our
+                                carefully curated selection of exclusive golf destinations combines world-class play
+                                with the finest accommodations, dining, and service, ensuring your golf getaway exceeds
+                                all expectations.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 golf-story-image-container">
+                        <img src="img/island/bali/golf-2.jpg" alt="Royal Golf Experience" class="golf-story-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="golf-cta">
+            <div class="golf-cta-bg">
+                <img src="img/island/bali/golf.jpg" alt="Plan Your Golf Getaway">
+            </div>
+            <div class="golf-cta-overlay"></div>
+            <div class="container">
+                <div class="golf-cta-content">
+                    <h2 style="color: white;">Plan Your Perfect Golf Getaway</h2>
+                    <p>Our golf concierge team is ready to craft your personalized golf experience, combining the
+                        world's most exclusive courses with uncompromising luxury and service.</p>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Destinations Section -->
+        <section id="golf-destinations" class="golf-destinations">
+            <div class="container">
+                <div class="golf-destinations-title">
+                    <h2>Signature Destinations & Courses</h2>
+                    <p>Experience the finest collection of championship courses, each offering a perfect blend of
+                        natural beauty and masterful design.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="golf-course-card">
+                            <a href="golf-detail.html?id=bali-national">
+                                <img src="img/hero_home_1.jpg" alt="Bali National Golf Club" class="golf-course-image">
+                                <div class="golf-course-overlay">
+                                    <h3>Bali National Golf Club</h3>
+                                    <p>A tropical paradise course framed by lush forests and ocean views.</p>
+                                    <div class="golf-course-features">
+                                        <span><i class="fas fa-flag"></i> 18 Holes</span>
+                                        <span><i class="fas fa-mountain"></i> Championship</span>
+                                        <span><i class="fas fa-hotel"></i> Resort</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="golf-course-card">
+                            <a href="golf-detail.html?id=nirwana-bali">
+                                <img src="img/hero_home_2.jpg" alt="Nirwana Bali Golf Club" class="golf-course-image">
+                                <div class="golf-course-overlay">
+                                    <h3>Nirwana Bali Golf Club</h3>
+                                    <p>Cliffside luxury with a stunning Tanah Lot temple backdrop.</p>
+                                    <div class="golf-course-features">
+                                        <span><i class="fas fa-flag"></i> 18 Holes</span>
+                                        <span><i class="fas fa-mountain"></i> Championship</span>
+                                        <span><i class="fas fa-water"></i> Ocean View</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="golf-course-card">
+                            <a href="golf-detail.html?id=ria-bintan">
+                                <img src="img/hero_blog.jpg" alt="Ria Bintan Golf Club" class="golf-course-image">
+                                <div class="golf-course-overlay">
+                                    <h3>Ria Bintan Golf Club</h3>
+                                    <p>Island seclusion with championship fairways and ocean vistas.</p>
+                                    <div class="golf-course-features">
+                                        <span><i class="fas fa-flag"></i> 27 Holes</span>
+                                        <span><i class="fas fa-mountain"></i> Championship</span>
+                                        <span><i class="fas fa-hotel"></i> Resort</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="golf-course-card">
+                            <a href="golf-detail.html?id=handara">
+                                <img src="img/parallax_bg.jpg" alt="Handara Golf & Resort" class="golf-course-image">
+                                <div class="golf-course-overlay">
+                                    <h3>Handara Golf & Resort</h3>
+                                    <p>Play amidst volcanic highlands and misty mountains.</p>
+                                    <div class="golf-course-features">
+                                        <span><i class="fas fa-flag"></i> 18 Holes</span>
+                                        <span><i class="fas fa-mountain"></i> Highlands</span>
+                                        <span><i class="fas fa-hotel"></i> Resort</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="golf-experience">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="golf-experience-content">
+                            <h2>The Royal Experience</h2>
+                            <p>Beyond exceptional courses, Royal Travel elevates your golf journey with unparalleled
+                                luxury and personalized service at every turn.</p>
+
+                            <ul class="golf-experience-list">
+                                <li>Personalized tee-time reservations with priority access</li>
+                                <li>Private caddy services from certified professionals</li>
+                                <li>Luxury transportation between accommodations and courses</li>
+                                <li>VIP golf carts with premium refreshments</li>
+                                <li>Customized golf instruction with PGA professionals</li>
+                                <li>Spa & wellness retreats after your game</li>
+                                <li>Fine dining with panoramic golf course views</li>
+                                <li>Exclusive clubhouse access and privileges</li>
+                            </ul>
+
+                            <p>Every aspect of your golf experience is meticulously crafted to ensure perfection,
+                                leaving you free to focus on your game and enjoy the magnificent surroundings.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 golf-experience-image-container">
+                        <img src="img/island/bali/golf-1.jpg" alt="Luxury Golf Experience 1"
+                            class="golf-experience-img">
+                        <img src="img/island/bali/golf-3.jpg" alt="Luxury Golf Experience 2"
+                            class="golf-experience-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section id="booking_section" class="golf-search">
+            <div class="container">
+                <div class="golf-search-container">
+                    <div class="golf-search-title">
+                        <h2>Refine Your Golf Experience</h2>
+                        <p>Tailor your search to uncover the most exquisite golf courses that match your unique
+                            preferences and desires.</p>
+                    </div>
+
+                    <div class="golf-search-form">
+                        <div class="filter-row">
+                            <div class="filter-group">
+                                <label><i class="fas fa-map-marker-alt"></i> Location</label>
+                                <select name="location" id="location-filter">
+                                    <option value="" selected>All Destinations</option>
+                                    <option value="bali">Bali</option>
+                                    <option value="ntb">NTB</option>
+                                    <option value="ntt">NTT</option>
+                                    <option value="kalimantan">Kalimantan</option>
+                                    <option value="sumatera">Sumatera</option>
+                                    <option value="jawa">Jawa</option>
+                                    <option value="kepulauan riau">Kepulauan Riau</option>
+                                    <option value="sulawesi">Sulawesi</option>
+                                    <option value="maluku">Maluku</option>
+                                    <option value="papua">Papua</option>
+                                </select>
+                            </div>
+
+                            <div class="filter-group">
+                                <label><i class="fas fa-flag"></i> Difficulty</label>
+                                <select name="difficulty">
+                                    <option value="" selected>Choose Your Challenge Level</option>
+                                    <option value="beginner">Beginner</option>
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="championship">Championship</option>
+                                </select>
+                            </div>
+
+                            <!-- <div class="filter-group">
+                                <label><i class="fas fa-concierge-bell"></i> Amenities</label>
+                                <select name="amenities">
+                                    <option value="" selected>Select Preferred Luxuries</option>
+                                    <option value="spa">Spa</option>
+                                    <option value="villa">Villa</option>
+                                    <option value="restaurant">Restaurant</option>
+                                    <option value="caddy">Private Caddy</option>
+                                </select>
+                            </div> -->
+
+                            <!-- <div class="filter-group">
+                                <label><i class="fas fa-star"></i> Experience</label>
+                                <select name="experience">
+                                    <option value="" selected>Curate Your Experience</option>
+                                    <option value="luxury">Luxury Retreat</option>
+                                    <option value="competitive">Competitive Play</option>
+                                    <option value="corporate">Corporate Event</option>
+                                    <option value="family">Family Vacation</option>
+                                </select>
+                            </div> -->
+
+                            <!-- <div class="filter-group">
+                                <label><i class=""></i></label>
+
+                                <div class="filter-action">
+                                    <button type="submit" class="btn-filter"><i class="fas fa-search"></i> Discover Your
+                                        Perfect
+                                        Course</button>
+                                </div>
+                            </div> -->
+                        </div>
+
+                    </div>
+
+                    <!-- Golf Cards Results -->
+                    <div class="golf-results">
+                        <div class="row">
+                            <!-- Golf Card 1 -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="golf-result-card">
+                                    <div class="golf-result-image">
+                                        <img src="img/hero_home_1.jpg" alt="Bali National Golf Club">
+                                        <div class="golf-result-tag">Featured</div>
+                                    </div>
+                                    <div class="golf-result-content">
+                                        <div class="golf-result-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span>5.0</span>
+                                        </div>
+                                        <h3>Bali National Golf Club</h3>
+                                        <p class="golf-result-location"><i class="fas fa-map-marker-alt"></i> Nusa Dua,
+                                            Bali</p>
+                                        <div class="golf-result-features">
+                                            <span><i class="fas fa-flag"></i> 18 Holes</span>
+                                            <span><i class="fas fa-mountain"></i> Championship</span>
+                                            <span><i class="fas fa-water"></i> Ocean View</span>
+                                        </div>
+                                        <div class="golf-result-footer">
+                                            <div class="golf-result-price">
+                                                <span class="price">$250</span>
+                                                <span class="unit">per person</span>
+                                            </div>
+                                            <a href="golf-detail.html?id=bali-national" class="btn-view">View
+                                                Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Golf Card 2 -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="golf-result-card">
+                                    <div class="golf-result-image">
+                                        <img src="img/hero_home_2.jpg" alt="Nirwana Bali Golf Club">
+                                    </div>
+                                    <div class="golf-result-content">
+                                        <div class="golf-result-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                            </div>
+                                            <span>4.8</span>
+                                        </div>
+                                        <h3>Nirwana Bali Golf Club</h3>
+                                        <p class="golf-result-location"><i class="fas fa-map-marker-alt"></i> Tabanan,
+                                            Bali</p>
+                                        <div class="golf-result-features">
+                                            <span><i class="fas fa-flag"></i> 18 Holes</span>
+                                            <span><i class="fas fa-mountain"></i> Championship</span>
+                                            <span><i class="fas fa-landmark"></i> Tanah Lot View</span>
+                                        </div>
+                                        <div class="golf-result-footer">
+                                            <div class="golf-result-price">
+                                                <span class="price">$275</span>
+                                                <span class="unit">per person</span>
+                                            </div>
+                                            <a href="golf-detail.html?id=nirwana-bali" class="btn-view">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Golf Card 3 -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="golf-result-card">
+                                    <div class="golf-result-image">
+                                        <img src="img/hero_blog.jpg" alt="Ria Bintan Golf Club">
+                                        <div class="golf-result-tag">Top Rated</div>
+                                    </div>
+                                    <div class="golf-result-content">
+                                        <div class="golf-result-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span>4.9</span>
+                                        </div>
+                                        <h3>Ria Bintan Golf Club</h3>
+                                        <p class="golf-result-location"><i class="fas fa-map-marker-alt"></i> Bintan
+                                            Island</p>
+                                        <div class="golf-result-features">
+                                            <span><i class="fas fa-flag"></i> 27 Holes</span>
+                                            <span><i class="fas fa-mountain"></i> Championship</span>
+                                            <span><i class="fas fa-water"></i> Ocean View</span>
+                                        </div>
+                                        <div class="golf-result-footer">
+                                            <div class="golf-result-price">
+                                                <span class="price">$290</span>
+                                                <span class="unit">per person</span>
+                                            </div>
+                                            <a href="golf-detail.html?id=ria-bintan" class="btn-view">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Golf Card 4 -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="golf-result-card">
+                                    <div class="golf-result-image">
+                                        <img src="img/parallax_bg.jpg" alt="Handara Golf & Resort">
+                                    </div>
+                                    <div class="golf-result-content">
+                                        <div class="golf-result-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                            </div>
+                                            <span>4.7</span>
+                                        </div>
+                                        <h3>Handara Golf & Resort</h3>
+                                        <p class="golf-result-location"><i class="fas fa-map-marker-alt"></i> Bedugul,
+                                            Bali</p>
+                                        <div class="golf-result-features">
+                                            <span><i class="fas fa-flag"></i> 18 Holes</span>
+                                            <span><i class="fas fa-mountain"></i> Highlands</span>
+                                            <span><i class="fas fa-cloud"></i> Misty Mountains</span>
+                                        </div>
+                                        <div class="golf-result-footer">
+                                            <div class="golf-result-price">
+                                                <span class="price">$220</span>
+                                                <span class="unit">per person</span>
+                                            </div>
+                                            <a href="golf-detail.html?id=handara" class="btn-view">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Golf Card 5 -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="golf-result-card">
+                                    <div class="golf-result-image">
+                                        <img src="img/blog-1.jpg" alt="New Kuta Golf">
+                                    </div>
+                                    <div class="golf-result-content">
+                                        <div class="golf-result-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                            <span>4.3</span>
+                                        </div>
+                                        <h3>New Kuta Golf</h3>
+                                        <p class="golf-result-location"><i class="fas fa-map-marker-alt"></i> Pecatu,
+                                            Bali</p>
+                                        <div class="golf-result-features">
+                                            <span><i class="fas fa-flag"></i> 18 Holes</span>
+                                            <span><i class="fas fa-mountain"></i> Links Style</span>
+                                            <span><i class="fas fa-water"></i> Cliff View</span>
+                                        </div>
+                                        <div class="golf-result-footer">
+                                            <div class="golf-result-price">
+                                                <span class="price">$185</span>
+                                                <span class="unit">per person</span>
+                                            </div>
+                                            <a href="golf-detail.html?id=new-kuta" class="btn-view">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Golf Card 6 -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="golf-result-card">
+                                    <div class="golf-result-image">
+                                        <img src="img/blog-2.jpg" alt="Lombok Golf Kosaido Country Club">
+                                        <div class="golf-result-tag">New</div>
+                                    </div>
+                                    <div class="golf-result-content">
+                                        <div class="golf-result-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                            <span>4.2</span>
+                                        </div>
+                                        <h3>Lombok Golf Kosaido</h3>
+                                        <p class="golf-result-location"><i class="fas fa-map-marker-alt"></i> Central
+                                            Lombok</p>
+                                        <div class="golf-result-features">
+                                            <span><i class="fas fa-flag"></i> 18 Holes</span>
+                                            <span><i class="fas fa-mountain"></i> Par 72</span>
+                                            <span><i class="fas fa-water"></i> Mountain View</span>
+                                        </div>
+                                        <div class="golf-result-footer">
+                                            <div class="golf-result-price">
+                                                <span class="price">$195</span>
+                                                <span class="unit">per person</span>
+                                            </div>
+                                            <a href="golf-detail.html?id=lombok-kosaido" class="btn-view">View
+                                                Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="pagination__wrapper">
+                            <ul class="pagination">
+                                <li><a href="#0" class="prev"><i class="bi bi-arrow-left-short"></i></a></li>
+                                <li>
+                                    <a href="#0" class="active">1</a>
+                                </li>
+                                <li>
+                                    <a href="#0">2</a>
+                                </li>
+                                <li>
+                                    <a href="#0">3</a>
+                                </li>
+                                <li>
+                                    <a href="#0">4</a>
+                                </li>
+                                <li><a href="#0" class="next"><i class="bi bi-arrow-right-short"></i></a></li>
+                            </ul>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Packages Section -->
+        <section id="golf-packages" class="golf-packages">
+            <div class="container">
+                <div class="golf-packages-title">
+                    <h2>Exclusive Gol Retreats & Packages</h2>
+                    <p>Custom golf vacation packages designed for the discerning traveler who expects nothing but
+                        perfection.</p>
+                </div>
+
+                <!-- replaced: three hard-coded <div class="col…"> cards -->
+                <div class="row">
+                    <!-- renderGolfPackages() will inject the cards here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        <!-- How It Works -->
+        <div class="home section-4 how-it-works">
+            <div class="container margin_120_95">
+                <div class="title text-center mb-5">
+                    <small data-cue="slideInUp">Your Journey Begins Here</small>
+                    <h2 data-cue="slideInUp" data-delay="100">How to Use Our Website</h2>
+                    <p class="lead" data-cue="slideInUp" data-delay="200">Follow these simple steps to plan your luxury
+                        experience with Royal Travel.</p>
+                </div>
+
+                <div class="row process-steps" data-cues="slideInUp" data-delay="300">
+                    <div class="col-lg-3">
+                        <div class="process-box" data-cue="slideInUp">
+                            <span class="step-number">01</span>
+                            <i class="bi bi-search"></i>
+                            <h3>View Our Services</h3>
+                            <p>Explore our range of luxury offerings, including exclusive hotels, private yachts, jets,
+                                and golf courses.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="process-box" data-cue="slideInUp" data-delay="200">
+                            <span class="step-number">02</span>
+                            <i class="bi bi-cart-plus"></i>
+                            <h3>Add to Cart</h3>
+                            <p>Select your desired services and add them to your cart to build your personalized
+                                itinerary.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="process-box" data-cue="slideInUp" data-delay="400">
+                            <span class="step-number">03</span>
+                            <i class="bi bi-send-check"></i>
+                            <h3>Submit Your Request</h3>
+                            <p>Proceed to your cart, review your selections, and submit your request for a bespoke
+                                travel plan.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="process-box" data-cue="slideInUp" data-delay="600">
+                            <span class="step-number">04</span>
+                            <i class="bi bi-headset"></i>
+                            <h3>Our Staff Will Contact You</h3>
+                            <p>Once we receive your request, our dedicated staff will contact you to finalize the
+                                details and confirm your booking.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="mt-5 mb-5">
+
+                <div class="row justify-content-center pt-4 ">
+                    <div class="col-lg-8 text-center justify-content-center">
+                        <div data-cue="slideInUp justify-content-center">
+                            <div class="title">
+                                <small>Alternatively</small>
+                                <h2>Prefer a Direct Consultation?</h2>
+                            </div>
+                            <p>If you have specific requirements or prefer to discuss your travel plans directly with
+                                our VIP concierge, we're here to assist. Contact us for a personalized planning
+                                experience.</p>
+                            <p class=""><strong>Call our VIP Concierge:</strong> <a href="tel:+6282237586565">+62 822
+                                    375
+                                    865 65</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div> -->
+    </main>
+
+    <footer class="revealed">
+        <div class="footer_bg">
+            <div class="gradient_over"></div>
+            <div class="background-image" data-background="url(img/footer.jpg)"></div>
+        </div>
+        <div class="container">
+            <div class="row move_content">
+                <div class="col-lg-4 col-md-12">
+                    <h5>Contacts</h5>
+                    <ul>
+                        <li>PT. Anggun Royal Travel<br>Lombok, Indonesia<br><br></li>
+                        <li><strong><a>info@royaltravel.agency</a></strong></li>
+                        <li><strong><a>+ 62 822 375 865 65</a></strong></li>
+                    </ul>
+                    <div class="social">
+                        <ul>
+                            <li><a href="https://www.instagram.com/royaltravelluxury" target="_blank"><i
+                                        class="bi bi-instagram"></i></a></li>
+                            <li><a href="https://wa.me/+6282237586565" target="_blank"><i
+                                        class="bi bi-whatsapp"></i></a></li>
+                            <li><a href="https://web.facebook.com/profile.php?id=61573090605100" target="_blank"><i
+                                        class="bi bi-facebook"></i></a></li>
+                            <li><a href="https://x.com/RoyalTrvl" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                            </li>
+                            <li><a href="https://www.tiktok.com/@royaltravelluxury" target="_blank"><i
+                                        class="bi bi-tiktok"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 ms-lg-auto">
+                    <h5>Explore</h5>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="hotels.html">Luxury Villas & Resorts</a></li>
+                            <li><a href="yachts.html">Private Yacht Charters</a></li>
+                            <li><a href="jets.html">Private Jet</a></li>
+                            <li><a href="golf.html">Golf Courses</a></li>
+                            <li><a href="news.html">News &amp; Events</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div id="newsletter">
+                        <h5>Newsletter</h5>
+                        <div id="message-newsletter"></div>
+                        <form method="post" action="phpmailer/newsletter_template_email.php" name="newsletter_form"
+                            id="newsletter_form">
+                            <div class="form-group">
+                                <input type="email" name="email_newsletter" id="email_newsletter" class="form-control"
+                                    placeholder="Your email">
+                                <button type="submit" id="submit-newsletter"><i class="bi bi-send"></i></button>
+                            </div>
+                        </form>
+                        <p>Receive latest offers and promos without spam. You can cancel anytime.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/row-->
+        </div>
+        <!--/container-->
+        <div class="copy">
+            <div class="container">
+                Royal Travel Agency
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- /back to top -->
+
+    <!-- COMMON SCRIPTS -->
+     <script src="js/config.js"></script>
+
+    <script src="js/common_scripts.js"></script>
+    <script src="js/common_functions.js"></script>
+    <script src="phpmailer/validate.js"></script>
+
+    <!-- SPECIFIC SCRIPTS -->
+    <script src="js/isotope.min.js"></script>
+    <script src="js/golf.js"></script>
+    <!-- <script src="js/golf-data.js"></script> -->
+    <script>
+        $(function () {
+            "use strict";
+            $(window).on('load', function () {
+                var $container = $('.isotope-wrapper');
+                $container.isotope({ itemSelector: '.item', layoutMode: 'masonry', });
+            });
+
+            // Initialize animations
+            setTimeout(function () {
+                $('.golf-hero-content').addClass('is-transitioned');
+            }, 500);
+        });
+    </script>
+    <script src="js/cart.js"></script>
+
+
+    <!-- Language switcher script -->
+    <script src="js/language.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Book your exclusive golf experience at Bali National Golf Club with Royal Travel."
+    />
+    <meta name="author" content="Royal Travel" />
+    <title>Golf Booking | Royal Travel</title>
+
+    <!-- GOOGLE WEB FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Montserrat:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery and jQuery UI (ensure these are loaded first) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link href="css/style-new.css" rel="stylesheet" />
+    <link href="css/vendors.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Datepicker -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
+    <!-- Timepicker -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CUSTOM CSS -->
+
+    <link href="css/custom.css" rel="stylesheet" />
+
+    <!-- GOOGLE TRANSLATE SCRIPT -->
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+    <link href="css/golf.css" rel="stylesheet" />
+
+    <!-- User Information Script -->
+    <script src="js/booking-user-information.js"></script>
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <style>
+      /* Custom CSS for golf-booking page */
+      .booking-container {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        padding: 30px;
+        margin-bottom: 30px;
+        border: 1px solid rgba(211, 164, 120, 0.1);
+      }
+
+      .booking-header {
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(211, 164, 120, 0.1);
+      }
+
+      .booking-header h3 {
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .booking-form .form-group {
+        margin-bottom: 25px;
+      }
+
+      .booking-form label {
+        font-weight: 500;
+        color: #444;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .calendar-inputs,
+      .time-inputs {
+        position: relative;
+      }
+
+      .calendar-inputs i,
+      .time-inputs i {
+        position: absolute;
+        right: 15px;
+        top: 12px;
+        color: #d3a478;
+        font-size: 18px;
+        z-index: 1;
+      }
+
+      .golf-booking-info {
+        background: rgba(211, 164, 120, 0.1);
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      .golf-booking-info h4 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      .package-details {
+        border-top: 1px solid rgba(211, 164, 120, 0.1);
+        margin-top: 30px;
+        padding-top: 30px;
+      }
+
+      .package-option {
+        background: #f9f9f9;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(211, 164, 120, 0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .package-option:hover,
+      .package-option.selected {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        border-color: rgba(211, 164, 120, 0.3);
+      }
+
+      .package-option.selected {
+        background: rgba(211, 164, 120, 0.05);
+      }
+
+      .package-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .package-header h5 {
+        font-weight: 600;
+        margin-bottom: 0;
+        color: #333;
+      }
+
+      .package-price {
+        font-weight: 600;
+        color: #d3a478;
+        font-size: 18px;
+      }
+
+      .additional-services {
+        margin-top: 30px;
+        border-top: 1px solid rgba(211, 164, 120, 0.1);
+        padding-top: 30px;
+      }
+
+      .service-option {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .service-option label {
+        margin-left: 10px;
+        margin-bottom: 0;
+      }
+
+      .player-details {
+        margin-top: 30px;
+        border-top: 1px solid rgba(211, 164, 120, 0.1);
+        padding-top: 30px;
+      }
+
+      .player-details h4 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .price-summary {
+        margin-top: 20px;
+      }
+
+      .price-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(211, 164, 120, 0.1);
+      }
+
+      .price-total {
+        font-weight: 700;
+        font-size: 18px;
+        color: #333;
+        border-top: 2px solid rgba(211, 164, 120, 0.3);
+        padding-top: 15px;
+        margin-top: 15px;
+        border-bottom: none;
+      }
+
+      .price-label {
+        color: #666;
+      }
+
+      .summary-item {
+        margin-bottom: 20px;
+      }
+
+      .summary-item h5 {
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      .summary-item p {
+        color: #666;
+        margin-bottom: 10px;
+      }
+
+      .proceed-btn {
+        margin-top: 30px;
+      }
+
+      .handicap-info {
+        color: #666;
+        font-size: 14px;
+        margin-top: 5px;
+        font-style: italic;
+      }
+
+      @media (max-width: 767px) {
+        .booking-container {
+          padding: 20px;
+        }
+
+        .package-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .package-price {
+          margin-top: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      id="google_translate_element"
+      style="visibility: hidden; height: 0; overflow: hidden"
+    ></div>
+
+    <div id="preloader">
+      <div data-loader="circle-side"></div>
+    </div>
+    <!-- /Page Preload -->
+
+    <div class="layer"></div>
+    <!-- Opacity Mask -->
+
+    <!-- Start Navbar -->
+    <header class="reveal_header">
+      <div class="container-fluid">
+        <div
+          class="row align-items-center d-none d-sm-flex"
+          id="navbar-desktop"
+        >
+          <div class="col-6">
+            <a href="index.html" class="logo_normal"
+              ><img src="img/logo.png" height="84" alt=""
+            /></a>
+            <a href="index.html" class="logo_sticky"
+              ><img src="img/logo_sticky.png" height="84" alt=""
+            /></a>
+          </div>
+          <div class="col-6">
+            <nav>
+              <ul>
+                <li class="language-selector-dropdown">
+                  <a
+                    class="dropdown-toggle"
+                    href="#"
+                    id="languageDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    style="
+                      padding: 10px;
+                      display: inline-block;
+                      text-decoration: none;
+                    "
+                  >
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang-text">EN</span>
+                  </a>
+                  <ul
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="languageDropdownMenuLink"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="changeLanguage('en'); return false;"
+                        data-lang="en"
+                        >English</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="changeLanguage('es'); return false;"
+                        data-lang="es"
+                        >Español</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="cart.html" class="cart-icon-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0" class="menu_open">
+                    <div class="hamburger hamburger--spin">
+                      <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Mobile Navbar -->
+        <div class="d-sm-none" id="navbar-mobile">
+          <!-- Show only on extra-small screens (<576px) -->
+          <div class="row">
+            <div
+              class="col-12 text-center"
+              style="padding-top: 10px; padding-bottom: 5px"
+            >
+              <!-- Logo Row -->
+              <a href="index.html" class="logo_normal"
+                ><img src="img/logo.png" height="70" alt=""
+              /></a>
+              <a href="index.html" class="logo_sticky"
+                ><img src="img/logo_sticky.png" height="70" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="row align-items-center" style="padding-bottom: 10px">
+            <!-- Icon Row -->
+            <div class="col-12">
+              <nav>
+                <ul
+                  style="
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                  "
+                >
+                  <li class="language-selector-dropdown">
+                    <a
+                      class="dropdown-toggle"
+                      href="#"
+                      id="languageDropdownMenuLinkMobile"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      style="
+                        padding: 10px;
+                        display: inline-block;
+                        text-decoration: none;
+                      "
+                    >
+                      <i class="fas fa-globe"></i>
+                      <span id="current-lang-text-mobile">EN</span>
+                    </a>
+                    <ul
+                      class="dropdown-menu dropdown-menu-end"
+                      aria-labelledby="languageDropdownMenuLinkMobile"
+                    >
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          onclick="changeLanguage('en'); return false;"
+                          data-lang="en"
+                          >English</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          onclick="changeLanguage('es'); return false;"
+                          data-lang="es"
+                          >Español</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="cart.html" class="cart-icon-link">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <span class="cart-count">0</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#0" class="menu_open">
+                      <div class="hamburger hamburger--spin">
+                        <div class="hamburger-box">
+                          <div class="hamburger-inner"></div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="panel_menu">
+      <div class="panel__content">
+        <div class="panel__content_wrapper">
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-lg-5">
+                <nav class="wrapper_menu">
+                  <ul>
+                    <li>
+                      <div class="container-item">
+                        <a href="index.html" class="link">Home</a>
+                        <div class="image">
+                          <img src="img/navbar/home.jpg" alt="" />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-item">
+                        <a href="hotels.html">Luxury Villas & Resorts</a>
+                        <div class="image">
+                          <img src="img/navbar/hotel.jpg" alt="" />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-item">
+                        <a href="yachts.html">Private Yacht Charters</a>
+                        <div class="image">
+                          <!-- TODO: change this to yacht -->
+                          <img src="img/navbar/yacht.jpg" alt="" />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-item">
+                        <a href="jets.html">Private Jet</a>
+                        <div class="image">
+                          <img src="img/navbar/jet.png" alt="" />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-item">
+                        <a href="golf.html">Golf Courses</a>
+                        <div class="image">
+                          <img src="img/navbar/golf.jpg" alt="" />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-item">
+                        <a href="about.html">About</a>
+                        <div class="image">
+                          <img src="img/navbar/home.jpg" alt="" />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-item">
+                        <a href="news.html">News & Events</a>
+                        <div class="image">
+                          <img src="img/navbar/home.jpg" alt="" />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-item">
+                        <a href="contacts.html">Contacts</a>
+                        <div class="image">
+                          <img src="img/navbar/home.jpg" alt="" />
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- /wrapper_menu -->
+              </div>
+              <div class="col-lg-6 d-flex align-items-end">
+                <div class="menu_panel_details">
+                  <div class="row justify-content-between">
+                    <div class="col-lg-6 mb-lg-0 mb-4">
+                      <h5>Address</h5>
+                      <p>PT. Anggun Royal Travel<br />Lombok, Indonesia</p>
+                    </div>
+                    <div class="col-lg-5 mb-lg-0 mb-4">
+                      <h5>Contacts</h5>
+                      <div class="contacts">
+                        <ul>
+                          <li><a>+ 62 822 375 865 65</a></li>
+                          <li><a>info@royaltravel.agency</a></li>
+                        </ul>
+                      </div>
+                      <div class="social">
+                        <ul>
+                          <li>
+                            <a
+                              href="https://www.instagram.com/royaltravelluxury"
+                              target="_blank"
+                              ><i class="bi bi-instagram"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://wa.me/+6282237586565"
+                              target="_blank"
+                              ><i class="bi bi-whatsapp"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://web.facebook.com/profile.php?id=61573090605100"
+                              target="_blank"
+                              ><i class="bi bi-facebook"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="https://x.com/RoyalTrvl" target="_blank"
+                              ><i class="bi bi-twitter-x"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.tiktok.com/@royaltravelluxury"
+                              target="_blank"
+                              ><i class="bi bi-tiktok"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Navbar -->
+
+    <main>
+      <div class="hero small-height jarallax" data-jarallax data-speed="0.2">
+        <img
+          class="jarallax-img"
+          src="img/golf/golf-detail-hero.jpg"
+          alt=""
+          id="bookingHeroImage"
+        />
+        <div
+          class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center animate_hero"
+          data-opacity-mask="rgba(0, 0, 0, 0.5)"
+        >
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <small class="slide-animated one">Reserve Your Tee Time</small>
+                <h1 class="slide-animated two" id="bookingCourseName">
+                  Golf Course Booking
+                </h1>
+                <p class="slide-animated three">
+                  Complete your golf booking details
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Hero section -->
+
+      <div class="bg_white margin_120_95">
+        <div class="container">
+          <div
+            id="bookingError"
+            class="alert alert-danger"
+            style="display: none"
+          >
+            Could not load course details. Please go back and select a course.
+          </div>
+          <div class="row" id="bookingContent">
+            <div class="col-lg-8">
+              <div class="booking-container">
+                <div class="booking-header">
+                  <h3>Your Golf Experience</h3>
+                  <p>Please provide your booking information and preferences</p>
+                </div>
+
+                <form id="bookingForm" class="booking-form">
+                  <!-- Golf Information -->
+                  <div class="golf-booking-info">
+                    <h4>Tee Time Details</h4>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Golf Course</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="golfCourse"
+                            value="Loading..."
+                            disabled
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Location</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="location"
+                            value="Loading..."
+                            disabled
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Date</label>
+                          <div class="calendar-inputs">
+                            <i class="bi bi-calendar"></i>
+                            <input
+                              type="text"
+                              class="form-control datepicker"
+                              id="golfDate"
+                              placeholder="Select Date"
+                              required
+                              autocomplete="off"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Commented out Preferred Tee Time -->
+                      <!-- 
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Preferred Tee Time</label>
+                                                <div class="time-inputs">
+                                                    <i class="bi bi-clock"></i>
+                                                    <input type="text" class="form-control timepicker" id="teeTime" placeholder="Select Time" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        -->
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Number of Players</label>
+                          <div class="qty-buttons version_2">
+                            <input
+                              type="button"
+                              value="+"
+                              class="qtyplus"
+                              name="playerCount"
+                            />
+                            <input
+                              type="text"
+                              name="playerCount"
+                              id="playerCount"
+                              value="2"
+                              class="qty form-control"
+                            />
+                            <input
+                              type="button"
+                              value="-"
+                              class="qtyminus"
+                              name="playerCount"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Commented out Average Handicap -->
+                      <!--
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Average Handicap</label>
+                                                <input type="number" class="form-control" id="handicap" min="0" max="36" placeholder="0-36" value="18">
+                                                <div class="handicap-info">Optional, helps us arrange appropriate tee boxes</div>
+                                            </div>
+                                        </div>
+                                        -->
+                    </div>
+                  </div>
+
+                  <!-- Package Details -->
+                  <div class="package-details">
+                    <h4>Select Your Golf Package</h4>
+                    <div id="packageOptionsContainer">
+                      <p>Loading packages...</p>
+                    </div>
+                  </div>
+
+                  <!-- Additional Services - Commented Out -->
+                  <!--
+                                <div class="additional-services">
+                                    <h4>Additional Services</h4>
+                                    <p>Enhance your golf experience with premium services</p>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="service-option">
+                                                <input type="checkbox" id="clubRental" class="form-check-input">
+                                                <label for="clubRental">Club Rental ($50 per set)</label>
+                                            </div>
+                                            <div class="service-option">
+                                                <input type="checkbox" id="caddyService" class="form-check-input" checked>
+                                                <label for="caddyService">Personal Caddy ($30 per player)</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="service-option">
+                                                <input type="checkbox" id="golfLesson" class="form-check-input">
+                                                <label for="golfLesson">Private Coaching Session ($200)</label>
+                                            </div>
+                                            <div class="service-option">
+                                                <input type="checkbox" id="luxuryTransfer" class="form-check-input">
+                                                <label for="luxuryTransfer">Luxury Transportation ($75)</label>
+                                            </div>
+                                            <div class="service-option">
+                                                <input type="checkbox" id="lunchPackage" class="form-check-input">
+                                                <label for="lunchPackage">Gourmet Lunch Package ($40 per person)</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                -->
+
+                  <!-- Player Details -->
+                  <div class="player-details">
+                    <h4>Lead Player Information</h4>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>First Name</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="firstName"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Last Name</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="lastName"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Email</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Phone</label>
+                          <input
+                            type="tel"
+                            class="form-control"
+                            id="phone"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Special Requests</label>
+                      <textarea
+                        class="form-control"
+                        rows="3"
+                        id="specialRequests"
+                        placeholder="Special requests, preferred tee box, etc."
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <div class="proceed-btn text-center">
+                    <button type="submit" class="btn_1">Confirm Booking</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="booking-container">
+                <div class="booking-header">
+                  <h3>Booking Summary</h3>
+                </div>
+                <div class="summary-item mb-3">
+                  <h5 id="summaryCourseName">Loading...</h5>
+                  <p id="summaryCourseLocation">Loading...</p>
+                  <img
+                    src="img/default-golf-placeholder.jpg"
+                    alt="Golf Course"
+                    class="img-fluid rounded mb-3"
+                    id="summaryCourseImage"
+                  />
+                </div>
+                <div class="price-summary">
+                  <div class="price-item">
+                    <div class="price-label">Package</div>
+                    <div class="price-value" id="packageValue">-</div>
+                  </div>
+                  <div class="price-item">
+                    <div class="price-label">Rate Per Player</div>
+                    <div class="price-value" id="rateValue">-</div>
+                  </div>
+                  <div class="price-item">
+                    <div class="price-label">Number of Players</div>
+                    <div class="price-value" id="playersValue">-</div>
+                  </div>
+                  <div class="price-item">
+                    <div class="price-label">Package Subtotal</div>
+                    <div class="price-value" id="packageSubtotalValue">-</div>
+                  </div>
+                  <div class="price-item">
+                    <div class="price-label">Additional Services</div>
+                    <div class="price-value" id="additionalServicesValue">
+                      -
+                    </div>
+                  </div>
+                  <div class="price-item">
+                    <div class="price-label">Taxes & Fees</div>
+                    <div class="price-value" id="taxesValue">-</div>
+                  </div>
+                  <div class="price-total price-item">
+                    <div class="price-label">Total</div>
+                    <div class="price-value" id="totalValue">-</div>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <p>
+                    <small
+                      >* Pricing may vary based on seasonal adjustments and
+                      availability.</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="revealed">
+      <div class="footer_bg">
+        <div class="gradient_over"></div>
+        <div
+          class="background-image"
+          data-background="url(img/footer.jpg)"
+        ></div>
+      </div>
+      <div class="container">
+        <div class="row move_content">
+          <div class="col-lg-4 col-md-12">
+            <h5>Contacts</h5>
+            <ul>
+              <li>
+                PT. Anggun Royal Travel<br />Lombok, Indonesia<br /><br />
+              </li>
+              <li>
+                <strong><a>info@royaltravel.agency</a></strong>
+              </li>
+              <li>
+                <strong><a>+ 62 822 375 865 65</a></strong>
+              </li>
+            </ul>
+            <div class="social">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.instagram.com/royaltravelluxury"
+                    target="_blank"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://wa.me/+6282237586565" target="_blank"
+                    ><i class="bi bi-whatsapp"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://web.facebook.com/profile.php?id=61573090605100"
+                    target="_blank"
+                    ><i class="bi bi-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://x.com/RoyalTrvl" target="_blank"
+                    ><i class="bi bi-twitter-x"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.tiktok.com/@royaltravelluxury"
+                    target="_blank"
+                    ><i class="bi bi-tiktok"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 ms-lg-auto">
+            <h5>Explore</h5>
+            <div class="footer_links">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="hotels.html">Luxury Villas & Resorts</a></li>
+                <li><a href="yachts.html">Private Yacht Charters</a></li>
+                <li><a href="jets.html">Private Jet</a></li>
+                <li><a href="golf.html">Golf Courses</a></li>
+                <li><a href="news.html">News &amp; Events</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div id="newsletter">
+              <h5>Newsletter</h5>
+              <div id="message-newsletter"></div>
+              <form
+                method="post"
+                action="phpmailer/newsletter_template_email.php"
+                name="newsletter_form"
+                id="newsletter_form"
+              >
+                <div class="form-group">
+                  <input
+                    type="email"
+                    name="email_newsletter"
+                    id="email_newsletter"
+                    class="form-control"
+                    placeholder="Your email"
+                  />
+                  <button type="submit" id="submit-newsletter">
+                    <i class="bi bi-send"></i>
+                  </button>
+                </div>
+              </form>
+              <p>
+                Receive latest offers and promos without spam. You can cancel
+                anytime.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--/row-->
+      </div>
+      <!--/container-->
+      <div class="copy">
+        <div class="container">Royal Travel Agency</div>
+      </div>
+    </footer>
+    <!-- /footer -->
+
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <!-- /back to top -->
+
+    <!-- COMMON SCRIPTS -->
+    <script src="js/config.js"></script>
+
+    <script src="js/common_scripts.js"></script>
+    <script src="js/common_functions.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/golf-booking.js"></script>
+
+    <!-- Bootstrap Datepicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <!-- Timepicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.min.js"></script>
+
+    <!-- Cart and Golf Data -->
+
+    <!-- Language switcher script -->
+    <script src="js/language.js"></script>
+    <!-- <script src="js/golf-data.js"></script> -->
+
+    <!-- <script src="js/cart.js"></script> -->
+
+    <!-- Language switcher script -->
+    <script src="js/language.js"></script>
+  </body>
+</html>

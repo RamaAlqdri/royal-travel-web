@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="color-scheme" content="light">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Ansonika">
+    <title>Royal Travel</title>
+
+
+    <!-- GOOGLE WEB FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <link href="css/style-new.css" rel="stylesheet">
+    <link href="css/vendors.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <!-- YOUR CUSTOM CSS -->
+
+    <link href="css/custom.css" rel="stylesheet">
+
+
+    <!-- GOOGLE TRANSLATE SCRIPT -->
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    <!-- GOOGLE TRANSLATE SCRIPT -->
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</head>
+
+<body>
+    <div id="google_translate_element" style="visibility:hidden; height:0; overflow:hidden;"></div>
+
+
+    <div id="preloader">
+        <div data-loader="circle-side"></div>
+    </div><!-- /Page Preload -->
+
+    <div class="layer"></div><!-- Opacity Mask -->
+
+    <!-- Start Navbar -->
+    <header class="reveal_header">
+        <div class="container-fluid">
+            <div class="row align-items-center d-none d-sm-flex" id="navbar-desktop">
+                <div class="col-6">
+                    <a href="index.html" class="logo_normal"><img src="img/logo.png" height="84" alt=""></a>
+                    <a href="index.html" class="logo_sticky"><img src="img/logo_sticky.png" height="84" alt=""></a>
+                </div>
+                <div class="col-6">
+                    <nav>
+                        <ul>
+                            <li class="language-selector-dropdown">
+                                <a class="dropdown-toggle" href="#" id="languageDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="padding: 10px; display: inline-block; text-decoration: none;">
+                                    <i class="fas fa-globe"></i> <span id="current-lang-text">EN</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('en'); return false;"
+                                            data-lang="en">English</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('es'); return false;"
+                                            data-lang="es">Español</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="cart.html" class="cart-icon-link">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span class="cart-count">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0" class="menu_open">
+                                    <div class="hamburger hamburger--spin">
+                                        <div class="hamburger-box">
+                                            <div class="hamburger-inner"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Mobile Navbar -->
+            <div class="d-sm-none" id="navbar-mobile"> <!-- Show only on extra-small screens (<576px) -->
+                <div class="row">
+                    <div class="col-12 text-center" style="padding-top: 10px; padding-bottom: 5px;"> <!-- Logo Row -->
+                        <a href="index.html" class="logo_normal"><img src="img/logo.png" height="70" alt=""></a>
+                        <a href="index.html" class="logo_sticky"><img src="img/logo_sticky.png" height="70" alt=""></a>
+                    </div>
+                </div>
+                <div class="row align-items-center" style="padding-bottom: 10px;"> <!-- Icon Row -->
+                    <div class="col-12">
+                        <nav>
+                            <ul
+                                style="display: flex; justify-content: space-around; align-items: center; list-style: none; padding: 0; margin: 0;">
+                                <li class="language-selector-dropdown">
+                                    <a class="dropdown-toggle" href="#" id="languageDropdownMenuLinkMobile"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                        style="padding: 10px; display: inline-block; text-decoration: none;">
+                                        <i class="fas fa-globe"></i> <span id="current-lang-text-mobile">EN</span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end"
+                                        aria-labelledby="languageDropdownMenuLinkMobile">
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="changeLanguage('en'); return false;" data-lang="en">English</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="changeLanguage('es'); return false;" data-lang="es">Español</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="cart.html" class="cart-icon-link">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        <span class="cart-count">0</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0" class="menu_open">
+                                        <div class="hamburger hamburger--spin">
+                                            <div class="hamburger-box">
+                                                <div class="hamburger-inner"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="panel_menu">
+        <div class="panel__content">
+            <div class="panel__content_wrapper">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-5">
+                            <nav class="wrapper_menu">
+                                <ul>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="index.html" class="link">Home</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="hotels.html">Luxury Villas & Resorts</a>
+                                            <div class="image">
+                                                <img src="img/navbar/hotel.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="yachts.html">Private Yacht Charters</a>
+                                            <div class="image">
+                                                <!-- TODO: change this to yacht -->
+                                                <img src="img/navbar/yacht.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="jets.html">Private Jet</a>
+                                            <div class="image">
+                                                <img src="img/navbar/jet.png" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="golf.html">Golf Courses</a>
+                                            <div class="image">
+                                                <img src="img/navbar/golf.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="about.html">About</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="news.html">News & Events</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="contacts.html">Contacts</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav><!-- /wrapper_menu -->
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-end">
+                            <div class="menu_panel_details">
+                                <div class="row justify-content-between">
+                                    <div class="col-lg-6 mb-lg-0 mb-4">
+                                        <h5>Address</h5>
+                                        <p>PT. Anggun Royal Travel<br>Lombok, Indonesia</p>
+
+                                    </div>
+                                    <div class="col-lg-5 mb-lg-0 mb-4">
+                                        <h5>Contacts</h5>
+                                        <div class="contacts">
+                                            <ul>
+                                                <li><a>+ 62 822 375 865 65</a></li>
+                                                <li><a>info@royaltravel.agency</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social">
+                                            <ul>
+                                                <li><a href="https://www.instagram.com/royaltravelluxury"
+                                                        target="_blank"><i class="bi bi-instagram"></i></a></li>
+                                                <li><a href="https://wa.me/+6282237586565" target="_blank"><i
+                                                            class="bi bi-whatsapp"></i></a></li>
+                                                <li><a href="https://web.facebook.com/profile.php?id=61573090605100"
+                                                        target="_blank"><i class="bi bi-facebook"></i></a></li>
+                                                <li><a href="https://x.com/RoyalTrvl" target="_blank"><i
+                                                            class="bi bi-twitter-x"></i></a></li>
+                                                <li><a href="https://www.tiktok.com/@royaltravelluxury"
+                                                        target="_blank"><i class="bi bi-tiktok"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar -->
+
+    <main>
+        <div class="hero small-height jarallax" data-jarallax data-speed="0.2">
+            <img class="jarallax-img" src="img/island/ntt/cover.jpg" alt="">
+            <div class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center animate_hero"
+                data-opacity-mask="rgba(0, 0, 0, 0.5)">
+                <div class="container">
+                    <small class="slide-animated one">Luxury Travel Experience</small>
+                    <h1 class="slide-animated two">About Royal Travel</h1>
+                </div>
+            </div>
+        </div>
+        <!-- /Background Img Parallax -->
+
+        <div class="container margin_120_95">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-5">
+                    <div class="parallax_wrapper inverted">
+                        <img src="img/home_1_temp.jpg" alt="" class="img-fluid rounded-img">
+                        <div data-cue="slideInUp" class="img_over"><span data-jarallax-element="-30"><img
+                                    src="img/about/hotel.jpg" alt="" class="rounded-img"></span></div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="intro">
+                        <div class="title">
+                            <small>Royal Travel</small>
+                            <h2>Our History</h2>
+                        </div>
+                        <p class="lead">
+                            Royal Travel was founded in August 2016 in Spain to offer exclusive, high-end travel
+                            experiences in Indonesia for English speaking clients.
+                        </p>
+                        <p>
+                            With a legally registered business and strong roots in both Spanish professionalism and
+                            Indonesian culture, we have built trusted partnerships with villa owners, yacht providers,
+                            private jet operators, and premium golf resorts over the years. Every trip is designed to
+                            offer comfort,
+                            beauty, and a personal touch.
+                        </p>
+                        <p>
+                            Having welcomed numerous clients since our inception, our consultants speak fluent English
+                            and are passionate about sharing Indonesia’s
+                            most beautiful destinations in a professional and respectful way.
+                        </p>
+                        <p>
+                            We continue to grow with a commitment to integrity, innovation, and service excellence,
+                            helping each guest experience Indonesia in a personal and unforgettable way.
+                        </p>
+                        <p><em>Anggun, Founder and Owner</em></p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /Row -->
+        </div>
+        <!-- /container -->
+
+
+        <!-- Staff Section -->
+        <div class="bg_gray pattern_2">
+            <div class="container margin_120_95">
+                <div class="title text-center mb-5">
+                    <small>Our Team</small>
+                    <h2>Meet the Minds Behind Royal Travel</h2>
+                    <p class="lead">A passionate team dedicated to crafting extraordinary luxury experiences</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="team-card" data-cue="slideInUp">
+                            <div class="team-image">
+                                <img src="img/about/anggun.jpeg" alt="Anggun - Founder" class="img-fluid">
+                            </div>
+                            <div class="team-details">
+                                <h4>Anggun</h4>
+                                <p>Founder & CEO</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="team-card" data-cue="slideInUp" data-delay="200">
+                            <div class="team-image">
+                                <img src="img/about/rezky.png" alt="Programmer" class="img-fluid">
+                            </div>
+                            <div class="team-details">
+                                <h4>M Rezky</h4>
+                                <p> Software Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /Staff Section -->
+
+        <div class="bg_white">
+            <div class="container margin_120_95">
+                <div>
+                    <div class="row justify-content-between">
+                        <div class="col-lg-5 fixed_title">
+                            <div class="title">
+                                <small>Royal Travel</small>
+                                <h2>Our Services</h2>
+                                <p>We curate extraordinary luxury experiences that transcend traditional travel. Our
+                                    bespoke services are designed to transform your journey into an unparalleled
+                                    adventure of comfort, exclusivity, and personalized indulgence.</p>
+                            </div>
+                            <div class="list_ok">
+                                <ul>
+                                    <li data-cue="slideInUp" data-delay="200">
+                                        <h5>Luxury Villas & Resorts</h5>
+                                        <p>Experience the pinnacle of accommodation with our meticulously selected
+                                            luxury villas and five-star resorts. Each property offers unparalleled
+                                            comfort, breathtaking views, and personalized service that redefines
+                                            hospitality.</p>
+                                    </li>
+                                    <li data-cue="slideInUp" data-delay="300">
+                                        <h5>Private Yacht Charters</h5>
+                                        <p>Sail through Indonesia's most pristine waters on exclusive private yachts.
+                                            From intimate vessels to grand maritime experiences, we offer bespoke
+                                            sailing adventures that combine luxury, privacy, and unparalleled
+                                            exploration.</p>
+                                    </li>
+                                    <li data-cue="slideInUp" data-delay="400">
+                                        <h5>Private Jet Travel</h5>
+                                        <p>Elevate your journey with our private aviation services. Experience the
+                                            ultimate in comfort, speed, and discretion as you traverse Indonesia's
+                                            stunning landscapes with first-class, personalized air travel.</p>
+                                    </li>
+                                    <li data-cue="slideInUp" data-delay="500">
+                                        <h5>Prestigious Golf Retreats</h5>
+                                        <p>Indulge in world-class golfing experiences at Indonesia's most exclusive
+                                            courses. From tropical island greens to meticulously designed landscapes, we
+                                            offer golf retreats that combine sport, luxury, and breathtaking scenery.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ">
+                            <div data-cue="fadeIn" data-delay="500">
+                                <figure><img src="img/about/1.jpg" alt="" class="img-fluid rounded-img">
+                                </figure>
+                            </div>
+                            <div data-cue="fadeIn" data-delay="500">
+                                <figure>
+                                    <img src="img/about/2.jpg" alt="" class="img-fluid rounded-img">
+                                </figure>
+                            </div>
+                            <div data-cue="fadeIn" data-delay="500">
+                                <figure>
+                                    <img src="img/about/3.jpg" alt="" class="img-fluid rounded-img">
+                                </figure>
+                            </div>
+                            <div data-cue="fadeIn" data-delay="500">
+                                <figure>
+                                    <img src="img/about/4.jpg" alt="" class="img-fluid rounded-img">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /container-->
+        </div>
+        <!-- /bg_white -->
+
+
+
+        <div class="container">
+
+            <!-- /Row -->
+            <!-- <div class="row justify-content-between margin_60_0">
+                <div class="col-lg-4">
+                    <div class="title">
+                        <small>Royal Travel Faq</small>
+                        <h3>Frequently Questions</h3>
+                    </div>
+                    <p>Can't find your question in the list?
+                        Let us know your questions.</p>
+                    <p><a href="contacts.html" class="animated_link"><strong>Contact Us <i
+                                    class="bi bi-arrow-right"></i></strong></a></p>
+                </div>
+                <div class="col-lg-7">
+                    <div role="tablist" class="mb-5 accordion" id="faq">
+                        <div class="card">
+                            <div class="card-header" role="tab">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseOne_product"
+                                        aria-expanded="false">
+                                        <i class="indicator bi-plus-lg"></i>Cancellation
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapseOne_product" class="collapse" role="tabpanel" data-bs-parent="#faq">
+                                <div class="card-body">
+                                    <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                        craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                        haven't heard of them accusamus labore sustainable VHS.</p>
+                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                        shoreditch et.</p>
+                                </div>
+                            </div>
+                        </div> -->
+            <!-- /card -->
+            <!-- <div class="card">
+                            <div class="card-header" role="tab">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseTwo_product"
+                                        aria-expanded="false">
+                                        <i class="indicator bi-plus-lg"></i>Payments
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo_product" class="collapse" role="tabpanel" data-bs-parent="#faq">
+                                <div class="card-body">
+                                    <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                        craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                        haven't heard of them accusamus labore sustainable VHS.</p>
+                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                        shoreditch et.</p>
+                                </div>
+                            </div>
+                        </div> -->
+            <!-- /card -->
+            <!-- <div class="card">
+                            <div class="card-header" role="tab">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseThree_product"
+                                        aria-expanded="false">
+                                        <i class="indicator bi-plus-lg"></i>Check In / Out Rules
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapseThree_product" class="collapse" role="tabpanel" data-bs-parent="#faq">
+                                <div class="card-body">
+                                    <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                        craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                        haven't heard of them accusamus labore sustainable VHS.</p>
+                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                        shoreditch et.</p>
+                                </div>
+                            </div>
+                        </div> -->
+            <!-- /card -->
+            <!-- <div class="card">
+                            <div class="card-header" role="tab">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseFour_product"
+                                        aria-expanded="false">
+                                        <i class="indicator bi-plus-lg"></i>Disable Access
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapseFour_product" class="collapse" role="tabpanel" data-bs-parent="#faq">
+                                <div class="card-body">
+                                    <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                        craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                        haven't heard of them accusamus labore sustainable VHS.</p>
+                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                        shoreditch et.</p>
+                                </div>
+                            </div>
+                        </div> -->
+            <!-- /card -->
+            <!-- </div> -->
+            <!-- /accordion -->
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- /Row -->
+            <!-- </div> -->
+            <!-- /container -->
+
+
+    </main>
+    <footer class="revealed">
+        <div class="footer_bg">
+            <div class="gradient_over"></div>
+            <div class="background-image" data-background="url(img/footer.jpg)"></div>
+        </div>
+        <div class="container">
+            <div class="row move_content">
+                <div class="col-lg-4 col-md-12">
+                    <h5>Contacts</h5>
+                    <ul>
+                        <li>PT. Anggun Royal Travel<br>Lombok, Indonesia<br><br></li>
+                        <li><strong><a>info@royaltravel.agency</a></strong></li>
+                        <li><strong><a>+ 62 822 375 865 65</a></strong></li>
+                    </ul>
+                    <div class="social">
+                        <ul>
+                            <li><a href="https://www.instagram.com/royaltravelluxury" target="_blank"><i
+                                        class="bi bi-instagram"></i></a></li>
+                            <li><a href="https://wa.me/+6282237586565" target="_blank"><i
+                                        class="bi bi-whatsapp"></i></a></li>
+                            <li><a href="https://web.facebook.com/profile.php?id=61573090605100" target="_blank"><i
+                                        class="bi bi-facebook"></i></a></li>
+                            <li><a href="https://x.com/RoyalTrvl" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                            </li>
+                            <li><a href="https://www.tiktok.com/@royaltravelluxury" target="_blank"><i
+                                        class="bi bi-tiktok"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 ms-lg-auto">
+                    <h5>Explore</h5>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="hotels.html">Luxury Villas & Resorts</a></li>
+                            <li><a href="yachts.html">Private Yacht Charters</a></li>
+                            <li><a href="jets.html">Private Jet</a></li>
+                            <li><a href="golf.html">Golf Courses</a></li>
+                            <li><a href="news.html">News &amp; Events</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div id="newsletter">
+                        <h5>Newsletter</h5>
+                        <div id="message-newsletter"></div>
+                        <form method="post" action="phpmailer/newsletter_template_email.php" name="newsletter_form"
+                            id="newsletter_form">
+                            <div class="form-group">
+                                <input type="email" name="email_newsletter" id="email_newsletter" class="form-control"
+                                    placeholder="Your email">
+                                <button type="submit" id="submit-newsletter"><i class="bi bi-send"></i></button>
+                            </div>
+                        </form>
+                        <p>Receive latest offers and promos without spam. You can cancel anytime.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/row-->
+        </div>
+        <!--/container-->
+        <div class="copy">
+            <div class="container">
+                Royal Travel Agency
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- /back to top -->
+
+    <!-- COMMON SCRIPTS -->
+     <script src="js/config.js"></script>
+
+    <script src="js/common_scripts.js"></script>
+    <script src="js/common_functions.js"></script>
+    <script src="phpmailer/validate.js"></script>
+
+    <script src="js/cart.js"></script>
+
+    <!-- Language switcher script -->
+    <script src="js/language.js"></script>
+</body>
+
+</html>

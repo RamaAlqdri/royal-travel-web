@@ -1,0 +1,275 @@
+:root {
+  color-scheme: light only !important;
+}
+
+/* Navigation Bar Related */
+.cart-icon-link {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.cart-icon-link:hover {
+    color: #d3a478;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #d3a478;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+header.sticky .cart-icon-link {
+    color: #333;
+}
+
+header.sticky .cart-icon-link:hover {
+    color: #d3a478;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    .cart-icon-link {
+        font-size: 18px;
+    }
+
+    .cart-count {
+        width: 18px;
+        height: 18px;
+        font-size: 10px;
+        top: -6px;
+        right: -6px;
+    }
+}
+
+/* Sticky Header Icon Colors */
+header.reveal_header.headroom--pinned nav ul li a.cart-icon-link i,
+header.reveal_header.headroom--pinned nav ul li a.cart-icon-link .cart-count {
+    color: #000000; /* Black color for cart icon and count */
+}
+
+header.reveal_header.headroom--pinned nav ul li a.menu_open .hamburger .hamburger-inner,
+header.reveal_header.headroom--pinned nav ul li a.menu_open .hamburger .hamburger-inner::before,
+header.reveal_header.headroom--pinned nav ul li a.menu_open .hamburger .hamburger-inner::after {
+    background-color: #000000; /* Black color for hamburger icon lines */
+}
+
+/* Ensure these styles have enough specificity if they are overridden by other rules. 
+   You might need to inspect the element in your browser to see what styles are being applied 
+   if this doesn't work as expected. */
+
+/* Add your custom CSS here */
+
+/* Language Selector Styles */
+/* Default (Top of Page) Styles */
+header.reveal_header.headroom--top .language-selector-dropdown a#languageDropdownMenuLink {
+    color: #fff; /* White color for text and icon */
+}
+
+header.reveal_header.headroom--top .language-selector-dropdown a#languageDropdownMenuLink .fa-globe,
+header.reveal_header.headroom--top .language-selector-dropdown a#languageDropdownMenuLink #current-lang-text {
+    color: #fff; /* Explicitly white */
+    transition: color 0.3s ease;
+}
+
+/* Sticky (Scrolled) Styles */
+header.reveal_header.headroom--not-top .language-selector-dropdown a#languageDropdownMenuLink,
+header.reveal_header.headroom--pinned .language-selector-dropdown a#languageDropdownMenuLink /* Using --pinned as well for consistency with cart */ {
+    color: #000000; /* Black color for text and icon, matching cart icon */
+}
+
+header.reveal_header.headroom--not-top .language-selector-dropdown a#languageDropdownMenuLink .fa-globe,
+header.reveal_header.headroom--not-top .language-selector-dropdown a#languageDropdownMenuLink #current-lang-text,
+header.reveal_header.headroom--pinned .language-selector-dropdown a#languageDropdownMenuLink .fa-globe,
+header.reveal_header.headroom--pinned .language-selector-dropdown a#languageDropdownMenuLink #current-lang-text {
+    color: #000000; /* Explicitly black */
+    transition: color 0.3s ease;
+}
+
+/* Dropdown Menu Styling (for both states, typically opens with a light background) */
+.language-selector-dropdown .dropdown-menu {
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.175);
+}
+
+.language-selector-dropdown .dropdown-menu .dropdown-item {
+    color: #333;
+    padding: 0.5rem 1rem;
+}
+
+.language-selector-dropdown .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #1e2125;
+}
+
+/* Style for the active language item in the dropdown */
+.language-selector-dropdown .dropdown-menu .dropdown-item.active-lang {
+    font-weight: bold; /* Make the text bold */
+    background-color: #e9ecef; /* A slightly different background */
+    color: #000; /* Ensure text is dark enough */
+}
+
+/* Adjust positioning if necessary, especially for dropdown-menu-end */
+.language-selector-dropdown .dropdown-menu.dropdown-menu-end {
+    /* Ensure it doesn't go off-screen if too close to the edge */
+    /* right: 0; left: auto; by default for dropdown-menu-end */
+}
+
+/* Make the panel menu content wrapper scrollable when content overflows */
+.panel_menu .panel__content_wrapper {
+    /* REMOVED height: 100%; */
+    
+    /* Keep max-height based on viewport, adjust calc value if needed */
+    max-height: 100vh; 
+
+    overflow-y: auto; /* Enable vertical scrollbar ONLY if content overflows */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+
+    /* Add padding top/bottom INSIDE the scrollable area */
+    padding-top: 20px; /* Adjust as needed */
+    padding-bottom: 40px;
+    box-sizing: border-box; 
+
+    /* ------- Optional: Nicer Scrollbar Styling (Webkit & Firefox) ------- */
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(211, 164, 120, 0.6) rgba(0, 0, 0, 0.1); 
+
+    /* Webkit (Chrome, Safari, Edge) */
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(211, 164, 120, 0.6); 
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(211, 164, 120, 0.9); 
+    }
+    /* ------- End Optional Styling ------- */
+}
+
+/* Ensure the direct children containers also allow for this */
+.panel_menu .panel__content {
+    /* REMOVED height: 100%; */
+    overflow: hidden; /* Keep preventing this element from scrolling */
+}
+
+/* Commenting out rule for .container as it might not be needed */
+/* 
+.panel_menu .container {
+    height: auto; 
+} 
+*/
+
+/* The old rule for .wrapper_menu should definitely be gone */
+
+/* Reduce font size for panel menu links */
+.panel_menu .wrapper_menu ul li a {
+    font-size: 1.8rem; /* Adjust this value down from the original as needed */
+    /* You might need !important if another rule is overriding this, 
+       but try without it first: font-size: 1.8rem !important; */
+}
+
+/* Optional: Adjust line height if text feels too cramped vertically */
+/* 
+.panel_menu .wrapper_menu ul li {
+    line-height: 1.4; 
+} 
+*/
+
+/* Golf Course Cards for Island Pages */
+.golf-course-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.golf-course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.golf-course-card .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.golf-course-card .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.golf-course-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.golf-course-card .content {
+    padding: 20px;
+}
+
+.golf-course-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.golf-course-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.golf-course-card .features {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.golf-course-card .features span {
+    font-size: 13px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.golf-course-card .features i {
+    color: var(--primary-color);
+}
+
+.golf-courses-grid {
+    padding: 30px 0;
+}

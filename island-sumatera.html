@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="color-scheme" content="light">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Ansonika">
+    <title>Royal Travel Agency</title>
+
+
+    <!-- GOOGLE WEB FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <link href="css/style-new.css" rel="stylesheet">
+    <link href="css/vendors.min.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+
+    <link href="css/custom.css" rel="stylesheet">
+
+
+    <!-- GOOGLE TRANSLATE SCRIPT -->
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body>
+    <div id="google_translate_element" style="visibility:hidden; height:0; overflow:hidden;"></div>
+
+
+    <div id="preloader">
+        <div data-loader="circle-side"></div>
+    </div><!-- /Page Preload -->
+
+    <div class="layer"></div><!-- Opacity Mask -->
+
+    <!-- Start Navbar -->
+    <header class="reveal_header">
+        <div class="container-fluid">
+            <div class="row align-items-center d-none d-sm-flex" id="navbar-desktop">
+                <div class="col-6">
+                    <a href="index.html" class="logo_normal"><img src="img/logo.png" height="84" alt=""></a>
+                    <a href="index.html" class="logo_sticky"><img src="img/logo_sticky.png" height="84" alt=""></a>
+                </div>
+                <div class="col-6">
+                    <nav>
+                        <ul>
+                            <li class="language-selector-dropdown">
+                                <a class="dropdown-toggle" href="#" id="languageDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="padding: 10px; display: inline-block; text-decoration: none;">
+                                    <i class="fas fa-globe"></i> <span id="current-lang-text">EN</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('en'); return false;"
+                                            data-lang="en">English</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('es'); return false;"
+                                            data-lang="es">Español</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="cart.html" class="cart-icon-link">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span class="cart-count">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0" class="menu_open">
+                                    <div class="hamburger hamburger--spin">
+                                        <div class="hamburger-box">
+                                            <div class="hamburger-inner"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Mobile Navbar -->
+            <div class="d-sm-none" id="navbar-mobile"> <!-- Show only on extra-small screens (<576px) -->
+                <div class="row">
+                    <div class="col-12 text-center" style="padding-top: 10px; padding-bottom: 5px;"> <!-- Logo Row -->
+                        <a href="index.html" class="logo_normal"><img src="img/logo.png" height="70" alt=""></a>
+                        <a href="index.html" class="logo_sticky"><img src="img/logo_sticky.png" height="70" alt=""></a>
+                    </div>
+                </div>
+                <div class="row align-items-center" style="padding-bottom: 10px;"> <!-- Icon Row -->
+                    <div class="col-12">
+                        <nav>
+                            <ul
+                                style="display: flex; justify-content: space-around; align-items: center; list-style: none; padding: 0; margin: 0;">
+                                <li class="language-selector-dropdown">
+                                    <a class="dropdown-toggle" href="#" id="languageDropdownMenuLinkMobile"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                        style="padding: 10px; display: inline-block; text-decoration: none;">
+                                        <i class="fas fa-globe"></i> <span id="current-lang-text-mobile">EN</span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end"
+                                        aria-labelledby="languageDropdownMenuLinkMobile">
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="changeLanguage('en'); return false;" data-lang="en">English</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="changeLanguage('es'); return false;" data-lang="es">Español</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="cart.html" class="cart-icon-link">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        <span class="cart-count">0</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0" class="menu_open">
+                                        <div class="hamburger hamburger--spin">
+                                            <div class="hamburger-box">
+                                                <div class="hamburger-inner"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="panel_menu">
+        <div class="panel__content">
+            <div class="panel__content_wrapper">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-5">
+                            <nav class="wrapper_menu">
+                                <ul>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="index.html" class="link">Home</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="hotels.html">Luxury Villas & Resorts</a>
+                                            <div class="image">
+                                                <img src="img/navbar/hotel.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="yachts.html">Private Yacht Charters</a>
+                                            <div class="image">
+                                                <!-- TODO: change this to yacht -->
+                                                <img src="img/navbar/yacht.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="jets.html">Private Jet</a>
+                                            <div class="image">
+                                                <img src="img/navbar/jet.png" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="golf.html">Golf Courses</a>
+                                            <div class="image">
+                                                <img src="img/navbar/golf.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="about.html">About</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="news.html">News & Events</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="contacts.html">Contacts</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav><!-- /wrapper_menu -->
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-end">
+                            <div class="menu_panel_details">
+                                <div class="row justify-content-between">
+                                    <div class="col-lg-6 mb-lg-0 mb-4">
+                                        <h5>Address</h5>
+                                        <p>PT. Anggun Royal Travel<br>Lombok, Indonesia</p>
+
+                                    </div>
+                                    <div class="col-lg-5 mb-lg-0 mb-4">
+                                        <h5>Contacts</h5>
+                                        <div class="contacts">
+                                            <ul>
+                                                <li><a>+ 62 822 375 865 65</a></li>
+                                                <li><a>info@royaltravel.agency</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social">
+                                            <ul>
+                                                <li><a href="https://www.instagram.com/royaltravelluxury"
+                                                        target="_blank"><i class="bi bi-instagram"></i></a></li>
+                                                <li><a href="https://wa.me/+6282237586565" target="_blank"><i
+                                                            class="bi bi-whatsapp"></i></a></li>
+                                                <li><a href="https://web.facebook.com/profile.php?id=61573090605100"
+                                                        target="_blank"><i class="bi bi-facebook"></i></a></li>
+                                                <li><a href="https://x.com/RoyalTrvl" target="_blank"><i
+                                                            class="bi bi-twitter-x"></i></a></li>
+                                                <li><a href="https://www.tiktok.com/@royaltravelluxury"
+                                                        target="_blank"><i class="bi bi-tiktok"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar -->
+
+
+
+    <main>
+        <div class="hero island-hero full-height jarallax" data-jarallax data-speed="0.2">
+            <img class="jarallax-img kenburns" src="img/island/sumatera/cover2.jpg" alt="">
+            <div class="wrapper opacity-mask d-flex align-items-end justify-content-start animate_hero"
+                data-opacity-mask="rgba(0, 0, 0, 0.5)">
+                <div class="container mb-5">
+                    <small class="slide-animated one">A Sanctuary of Timeless Beauty</small>
+                    <h3 class="slide-animated two">Sumatera Island</h3>
+                    <p style="max-width: 600px; opacity: 0.8;">Immerse yourself in the rugged charm of Sumatra, where
+                        sprawling rainforests, majestic volcanoes, and pristine coastlines converge to create an
+                        unforgettable journey. Discover exclusive experiences from secluded jungle resorts and bespoke
+                        nature excursions to immersive cultural encounters with indigenous traditions offering a refined
+                        escape into nature's authentic splendor.</p>
+
+                </div>
+                <div class="mouse_wp slide-animated four">
+                    <a href="#first_section" class="btn_scrollto">
+                        <div class="mouse"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- /Background Image Parallax -->
+
+        <div class="pattern_2">
+            <div class="container margin_120_95" id="first_section">
+                <div class="row justify-content-between flex-lg-row-reverse align-items-center">
+                    <div class="col-lg-5">
+                        <div class="parallax_wrapper">
+                            <img src="img/island/bali/jet-2.jpg" alt="" class="img-fluid rounded-img">
+                            <div data-cue="slideInUp" class="img_over"><span data-jarallax-element="-30"><img
+                                        src="img/island/bali/jet-1.jpg" alt="" class="rounded-img"></span></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="intro">
+                            <div class="title">
+                                <small>Private Jet Service</small>
+                                <h2>Your Journey to Paradise Begins Above the Clouds</h2>
+                            </div>
+                            <p class="lead">Luxury begins the moment you depart. Elevate your journey with our fleet of
+                                private jets, transforming travel into an exclusive experience tailored just for you.
+                                From personalized cabin service to gourmet in-flight dining, every detail is designed
+                                for seamless elegance and comfort.</p>
+                            <p>As you soar at 40,000 feet, your journey is effortless. Upon arrival in Sumatera,
+                                experience
+                                VIP treatment, ensuring a smooth and uninterrupted transition into your luxury escape.
+                            </p>
+                            <div>
+                                <a href="#" id="viewJetScheduleBtn" class="btn_1  mt-3">
+                                    <i class="bi bi-airplane-engines me-2"></i> View Jet Schedule
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Row -->
+            </div>
+            <div class="pinned-image pinned-image--medium">
+                <div class="pinned-image__container" id="section_video">
+                    <video loop="loop" muted="muted" id="video_home">
+                        <source src="video/banner-home.mp4" type="video/mp4">
+                    </video>
+                    <div class="pinned-image__container-overlay"></div>
+                </div>
+                <div class="pinned_over_content">
+                    <div class="title white">
+                        <small data-cue="slideInUp" data-delay="200">A WINDOW INTO SUMATERA'S EXOTIC LUXURY</small>
+                        <h2 data-cue="slideInUp" data-delay="300">Embark on a Journey to<br>Untamed Elegance</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- /pinned content -->
+        </div>
+        <!-- /Pattern  -->
+        <div class="bg_white">
+            <div class="bg_white container margin_120_95 hotel-island-render-target">
+
+                <div class="row justify-content-center align-items-center">
+                    <div class="title text-center col-8">
+                        <small>A HAVEN OF EXCLUSIVITY & ELEGANCE</small>
+                        <h2>Your Private Retreat Awaits</h2>
+                        <p>Unwind in Sumatra's exclusive retreats, where luxury seamlessly blends with the raw beauty of
+                            nature. From elegant beachfront estates to secluded jungle villas, every stay offers
+                            unparalleled comfort, privacy, and impeccable service. Every detail is meticulously arranged
+                            whether you long for the serene allure of pristine shores or a hidden sanctuary amid ancient
+                            rainforests, your escape is a masterpiece of indulgence.</p>
+                    </div>
+                </div>
+                <br>
+
+                <div data-cues="zoomIn" data-delay="200">
+                    <div class="owl-carousel owl-theme carousel_item_centered_rooms rounded-img">
+                        <div class="item">
+                            <a href="room-details.html" class="box_cat_rooms">
+                                <figure>
+                                    <div class="background-image"
+                                        data-background="url(img/island/sumatera/lodge-1.jpg)">
+                                    </div>
+                                    <div class="info">
+                                        <small>From $180/night</small>
+                                        <h3>Rainforest Retreat - Jungle Lodge</h3>
+                                        <span>View Detail</span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="room-details.html" class="box_cat_rooms">
+                                <figure>
+                                    <div class="background-image"
+                                        data-background="url(img/island/sumatera/lodge-2.jpg)">
+                                    </div>
+                                    <div class="info">
+                                        <small>From $220/night</small>
+                                        <h3>Coastal Villa - Seaside Sanctuary</h3>
+                                        <span>View Detail</span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="room-details.html" class="box_cat_rooms">
+                                <figure>
+                                    <div class="background-image"
+                                        data-background="url(img/island/sumatera/lodge-3.jpg)">
+                                    </div>
+                                    <div class="info">
+                                        <small>From $250/night</small>
+                                        <h3>Mountain Escape - Highland Retreat</h3>
+                                        <span>View Detail</span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="room-details.html" class="box_cat_rooms">
+                                <figure>
+                                    <div class="background-image"
+                                        data-background="url(img/island/sumatera/lodge-4.jpg)">
+                                    </div>
+                                    <div class="info">
+                                        <small>From $270/night</small>
+                                        <h3>Cultural Haven - Indigenous Experience</h3>
+                                        <span>View Detail</span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <p class="text-center mt-0"><a href="hotels.html?filter=sumatera" class="btn_1 outline">View all
+                            accommodations</a>
+                    </p>
+                    <br>
+                    <br>
+                    <!-- /carousel-->
+                </div>
+                <!-- /row-->
+                <div class="title text-center mb-5">
+                    <small data-cue="slideInUp">Royal travel Accomodations</small>
+                    <h2 data-cue="slideInUp" data-delay="100">Some of our Facilities</h2>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="box_facilities no-border" data-cue="slideInUp">
+                            <i class="bi bi-flower1"></i>
+                            <h3>Spa & Wellness Center</h3>
+                            <p>Indulge in rejuvenating treatments and holistic therapies that promote relaxation and
+                                well-being, ensuring a serene escape.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="box_facilities" data-cue="slideInUp">
+                            <i class="bi bi-wifi"></i>
+                            <h3>High Speed Wifi</h3>
+                            <p>Stay connected with our complimentary high-speed Wi-Fi, perfect for both leisure and
+                                business
+                                needs.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="box_facilities" data-cue="slideInUp">
+                            <i class="bi bi-cup"></i>
+                            <h3>Bar & Restaurant</h3>
+                            <p>Savor exquisite culinary delights and refreshing beverages crafted by our talented chefs
+                                in a
+                                vibrant atmosphere.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="box_facilities" data-cue="slideInUp">
+                            <i class="bi bi-water"></i>
+                            <h3>Swimming Pool</h3>
+                            <p>Relax by our stunning swimming pool, surrounded by lush landscapes, offering a perfect
+                                spot
+                                for sunbathing and leisure.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Row -->
+            </div>
+        </div>
+        <!-- /container-->
+
+        <div class="bg_white marquee">
+            <div class="track">
+                <div class="content">&nbsp;Relax Enjoy Luxury Holiday Travel Discover Experience Relax Enjoy Luxury
+                    Holiday Travel Discover Experience Relax Enjoy Luxury Holiday Travel Discover Experience Relax
+                    Enjoy
+                    Luxury Holiday Travel Discover Experience</div>
+            </div>
+        </div>
+        <!-- /marquee-->
+
+        <div class="island-golf-section">
+            <div class="container margin_120_95">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <div class="title">
+                            <small data-cue="slideInUp">TEE OFF IN PARADISE</small>
+                            <h2 data-cue="slideInUp" data-delay="200">Golf, Redefined – Play in Sumatra's Most Exclusive
+                                Courses</h2>
+                            <p class="lead" data-cue="slideInUp" data-delay="300">
+                                Imagine teeing off at sunrise, with rolling greens and volcanic views. Sumatra's finest
+                                courses redefine golf as a luxury experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="golf-courses-grid">
+                    <div class="row g-4 golf-courses-list">
+                        <!-- Golf courses will be rendered here by js/golf-data.js -->
+                    </div>
+                </div>
+
+                <div class="text-center mt-5" data-cue="slideInUp" data-delay="600">
+                    <a href="golf.html" class="btn_1">
+                        Explore Golf Experiences
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="parallax_section_1 jarallax" data-jarallax data-speed="0.2">
+            <img class="jarallax-img kenburns-2" src="img/home/testimonial.jpg" alt="">
+            <div class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center"
+                data-opacity-mask="rgba(0, 0, 0, 0.5)">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="title white">
+                                <small class="mb-1">Luxury Experiences, Unforgettable Memories.</small>
+                                <h2>What Our Clients Say</h2>
+                            </div>
+                            <div class="carousel_testimonials owl-carousel owl-theme nav-dots-orizontal">
+                                <div>
+                                    <div class="box_overlay">
+                                        <div class="pic">
+                                            <figure><img src="img/home/mock-testimonial.png" alt="" class="img-circle">
+                                            </figure>
+                                            <h4>Roberta<small>12 Oct</small></h4>
+                                        </div>
+                                        <div class="comment">
+                                            "Royal Travel exceeded all my expectations! From the moment I arrived, every
+                                            detail was perfectly arranged. The luxury accommodations and personalized
+                                            service made my trip unforgettable."
+                                        </div>
+                                    </div>
+                                    <!-- End box_overlay -->
+                                </div>
+                                <div>
+                                    <div class="box_overlay">
+                                        <div class="pic">
+                                            <figure><img src="img/home/mock-testimonial-1.png" alt=""
+                                                    class="img-circle">
+                                            </figure>
+                                            <h4>Mira<small>2 Nov</small></h4>
+                                        </div>
+                                        <div class="comment">
+                                            "An incredible experience! The team at Royal Travel crafted a bespoke
+                                            itinerary that captured the essence of Indonesia. I felt like royalty
+                                            throughout my journey."
+                                        </div>
+                                    </div>
+                                    <!-- End box_overlay -->
+                                </div>
+                                <div>
+                                    <div class="box_overlay">
+                                        <div class="pic">
+                                            <figure><img src="img/home/mock-testimonial-2.png" alt=""
+                                                    class="img-circle">
+                                            </figure>
+                                            <h4>Amelia<small>3 Dec</small></h4>
+                                        </div>
+                                        <div class="comment">
+                                            "I can't thank Royal Travel enough for the amazing trip. The attention to
+                                            detail and the unique experiences they provided were beyond anything I could
+                                            have imagined."
+                                        </div>
+                                    </div>
+                                    <!-- End box_overlay -->
+                                </div>
+                                <div>
+                                    <div class="box_overlay">
+                                        <div class="pic">
+                                            <figure><img src="img/home/mock-testimonial-3.png" alt=""
+                                                    class="img-circle">
+                                            </figure>
+                                            <h4>John<small>15 Jan</small></h4>
+                                        </div>
+                                        <div class="comment">
+                                            "The service was impeccable and the itinerary was perfectly tailored to my
+                                            interests. I highly recommend Royal Travel for a luxurious experience."
+                                        </div>
+                                    </div>
+                                    <!-- End box_overlay -->
+                                </div>
+                                <div>
+                                    <div class="box_overlay">
+                                        <div class="pic">
+                                            <figure><img src="img/home/mock-testimonial-4.png" alt=""
+                                                    class="img-circle">
+                                            </figure>
+                                            <h4>Jerome<small>20 Feb</small></h4>
+                                        </div>
+                                        <div class="comment">
+                                            "A truly unforgettable journey! The attention to detail and the level of
+                                            service were outstanding."
+                                        </div>
+                                    </div>
+                                    <!-- End box_overlay -->
+                                </div>
+                                <div>
+                                    <div class="box_overlay">
+                                        <div class="pic">
+                                            <figure><img src="img/home/mock-testimonial-5.png" alt=""
+                                                    class="img-circle">
+                                            </figure>
+                                            <h4>Lucas<small>5 Mar</small></h4>
+                                        </div>
+                                        <div class="comment">
+                                            "Royal Travel made my dream vacation a reality. Every aspect of the trip was
+                                            handled with professionalism and care."
+                                        </div>
+                                    </div>
+                                    <!-- End box_overlay -->
+                                </div>
+                                <div>
+                                    <div class="box_overlay">
+                                        <div class="pic">
+                                            <figure><img src="img/home/mock-testimonial-6.png" alt=""
+                                                    class="img-circle">
+                                            </figure>
+                                            <h4>Rey<small>10 Apr</small></h4>
+                                        </div>
+                                        <div class="comment">
+                                            "An extraordinary adventure! Royal Travel's team went above and beyond to
+                                            ensure every moment was special."
+                                        </div>
+                                    </div>
+                                    <!-- End box_overlay -->
+                                </div>
+                                <!-- End box_overlay -->
+                            </div>
+                        </div>
+                        <!-- End carousel_testimonials -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- /parallax_section_1-->
+
+        <!-- <div class="bg_white">
+            <div class="container margin_120_95">
+                <div class="title mb-3">
+                    <small data-cue="slideInUp">Luxury experience</small>
+                    <h2 data-cue="slideInUp" data-delay="200">News & Events</h2>
+                </div>
+                <div class="row justify-content-center home">
+                    <div class="item col-xl-4 col-lg-6">
+                        <a class="box_contents" data-cue="slideInUp" data-delay="300">
+                            <figure><img src="img/home/article-1.jpg" alt="" class="img-fluid"><em>11 Jan</em></figure>
+                            <div class="wrapper">
+                                <small>Travel<span></span></small>
+                                <h2>Discover the Hidden Gems of Bali</h2>
+                                <em>Read more</em>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item col-xl-4 col-lg-6">
+                        <a class="box_contents" data-cue="slideInUp" data-delay="400">
+                            <figure><img src="img/home/article-2.jpg" alt="" class="img-fluid"><em>24 Jan</em></figure>
+                            <div class="wrapper">
+                                <small>Event<span></span></small>
+                                <h2>Royal Travel's Exclusive Yacht Tour</h2>
+                                <em>Read more</em>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item col-xl-4 col-lg-6">
+                        <a class="box_contents" data-cue="slideInUp" data-delay="500">
+                            <figure><img src="img/home/article-3.jpg" alt="" class="img-fluid"><em>21 Feb</em></figure>
+                            <div class="wrapper">
+                                <small>Experience<span></span></small>
+                                <h2>Indulge in Indonesia's Culinary Delights</h2>
+                                <em>Read more</em>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <p class="text-end"><a href="" class="btn_1 outline mt-2" data-cue="slideInUp" data-delay="600">View all
+                        News</a></p>
+            </div>
+        </div> -->
+
+
+        <!-- How It Works -->
+        <div class="home section-4 how-it-works">
+            <div class="container margin_120_95">
+                <div class="title text-center mb-5">
+                    <small data-cue="slideInUp">Your Journey Begins Here</small>
+                    <h2 data-cue="slideInUp" data-delay="100">How to Use Our Website</h2>
+                    <p class="lead" data-cue="slideInUp" data-delay="200">Follow these simple steps to plan your luxury
+                        experience with Royal Travel.</p>
+                </div>
+
+                <div class="row process-steps" data-cues="slideInUp" data-delay="300">
+                    <div class="col-lg-3">
+                        <div class="process-box" data-cue="slideInUp">
+                            <span class="step-number">01</span>
+                            <i class="bi bi-search"></i>
+                            <h3>View Our Services</h3>
+                            <p>Explore our range of luxury offerings, including exclusive hotels, private yachts, jets,
+                                and golf courses.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="process-box" data-cue="slideInUp" data-delay="200">
+                            <span class="step-number">02</span>
+                            <i class="bi bi-cart-plus"></i>
+                            <h3>Add to Cart</h3>
+                            <p>Select your desired services and add them to your cart to build your personalized
+                                itinerary.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="process-box" data-cue="slideInUp" data-delay="400">
+                            <span class="step-number">03</span>
+                            <i class="bi bi-send-check"></i>
+                            <h3>Submit Your Request</h3>
+                            <p>Proceed to your cart, review your selections, and submit your request for a bespoke
+                                travel plan.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="process-box" data-cue="slideInUp" data-delay="600">
+                            <span class="step-number">04</span>
+                            <i class="bi bi-headset"></i>
+                            <h3>Our Staff Will Contact You</h3>
+                            <p>Once we receive your request, our dedicated staff will contact you to finalize the
+                                details and confirm your booking.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="mt-5 mb-5">
+
+                <div class="row justify-content-center pt-4 ">
+                    <div class="col-lg-8 text-center justify-content-center">
+                        <div data-cue="slideInUp justify-content-center">
+                            <div class="title">
+                                <small>Alternatively</small>
+                                <h2>Prefer a Direct Consultation?</h2>
+                            </div>
+                            <p>If you have specific requirements or prefer to discuss your travel plans directly with
+                                our VIP concierge, we're here to assist. Contact us for a personalized planning
+                                experience.</p>
+                            <p class=""><strong>Call our VIP Concierge:</strong> <a href="tel:+6282237586565">+62 822
+                                    375
+                                    865 65</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /container -->
+
+    </main>
+    <footer class="revealed">
+        <div class="footer_bg">
+            <div class="gradient_over"></div>
+            <div class="background-image" data-background="url(img/footer.jpg)"></div>
+        </div>
+        <div class="container">
+            <div class="row move_content">
+                <div class="col-lg-4 col-md-12">
+                    <h5>Contacts</h5>
+                    <ul>
+                        <li>PT. Anggun Royal Travel<br>Lombok, Indonesia<br><br></li>
+                        <li><strong><a>info@royaltravel.agency</a></strong></li>
+                        <li><strong><a>+ 62 822 375 865 65</a></strong></li>
+                    </ul>
+                    <div class="social">
+                        <ul>
+                            <li><a href="https://www.instagram.com/royaltravelluxury" target="_blank"><i
+                                        class="bi bi-instagram"></i></a></li>
+                            <li><a href="https://wa.me/+6282237586565" target="_blank"><i
+                                        class="bi bi-whatsapp"></i></a></li>
+                            <li><a href="https://web.facebook.com/profile.php?id=61573090605100" target="_blank"><i
+                                        class="bi bi-facebook"></i></a></li>
+                            <li><a href="https://x.com/RoyalTrvl" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                            </li>
+                            <li><a href="https://www.tiktok.com/@royaltravelluxury" target="_blank"><i
+                                        class="bi bi-tiktok"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 ms-lg-auto">
+                    <h5>Explore</h5>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="hotels.html">Luxury Villas & Resorts</a></li>
+                            <li><a href="yachts.html">Private Yacht Charters</a></li>
+                            <li><a href="jets.html">Private Jet</a></li>
+                            <li><a href="golf.html">Golf Courses</a></li>
+                            <li><a href="news.html">News &amp; Events</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div id="newsletter">
+                        <h5>Newsletter</h5>
+                        <div id="message-newsletter"></div>
+                        <form method="post" action="phpmailer/newsletter_template_email.php" name="newsletter_form"
+                            id="newsletter_form">
+                            <div class="form-group">
+                                <input type="email" name="email_newsletter" id="email_newsletter" class="form-control"
+                                    placeholder="Your email">
+                                <button type="submit" id="submit-newsletter"><i class="bi bi-send"></i></button>
+                            </div>
+                        </form>
+                        <p>Receive latest offers and promos without spam. You can cancel anytime.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/row-->
+        </div>
+        <!--/container-->
+        <div class="copy">
+            <div class="container">
+                Royal Travel Agency
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- /back to top -->
+
+    <!-- COMMON SCRIPTS -->
+     <script src="js/config.js"></script>
+
+    <script src="js/common_scripts.js"></script>
+    <script src="js/common_functions.js"></script>
+    <script src="js/datepicker_inline.js"></script>
+    <script src="phpmailer/validate.js"></script>
+
+    <script src="js/cart.js"></script>
+
+    <!-- Language switcher script -->
+    <script src="js/language.js"></script>
+
+    <script src="js/hotel-data.js"></script>
+    <script src="js/golf-data.js"></script>
+
+    <script src="js/coming-soon-modal.js"></script>
+
+</body>
+
+</html>

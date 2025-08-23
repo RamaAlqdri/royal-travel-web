@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8"> <meta name="color-scheme" content="light">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Experience the ultimate luxury with Royal Travel's exclusive yacht charters. Bespoke journeys through exotic islands, personalized service, and unparalleled opulence.">
+    <meta name="author" content="Ansonika">
+    <title>Royal Travel - Luxury Yacht Experiences</title>
+
+    <!-- GOOGLE WEB FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/vendors.min.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+
+    <link href="css/custom.css" rel="stylesheet">
+
+
+    <!-- GOOGLE TRANSLATE SCRIPT -->
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <link href="css/style-new.css" rel="stylesheet">
+    <link href="css/yacht-style.css" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Add before the custom scripts -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+    <!-- Add in the head section -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Add before the custom scripts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+</head>
+
+<body>
+    <div id="google_translate_element" style="visibility:hidden; height:0; overflow:hidden;"></div>
+
+
+
+    <div id="preloader">
+        <div data-loader="circle-side"></div>
+    </div><!-- /Page Preload -->
+
+    <div class="layer"></div><!-- Opacity Mask -->
+
+    <!-- Start Navbar -->
+    <header class="reveal_header">
+        <div class="container-fluid">
+            <div class="row align-items-center d-none d-sm-flex" id="navbar-desktop">
+                <div class="col-6">
+                    <a href="index.html" class="logo_normal"><img src="img/logo.png" height="84" alt=""></a>
+                    <a href="index.html" class="logo_sticky"><img src="img/logo_sticky.png" height="84" alt=""></a>
+                </div>
+                <div class="col-6">
+                    <nav>
+                        <ul>
+                            <li class="language-selector-dropdown">
+                                <a class="dropdown-toggle" href="#" id="languageDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="padding: 10px; display: inline-block; text-decoration: none;">
+                                    <i class="fas fa-globe"></i> <span id="current-lang-text">EN</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('en'); return false;"
+                                            data-lang="en">English</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('es'); return false;"
+                                            data-lang="es">Español</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="cart.html" class="cart-icon-link">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span class="cart-count">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0" class="menu_open">
+                                    <div class="hamburger hamburger--spin">
+                                        <div class="hamburger-box">
+                                            <div class="hamburger-inner"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Mobile Navbar -->
+            <div class="d-sm-none" id="navbar-mobile"> <!-- Show only on extra-small screens (<576px) -->
+                <div class="row">
+                    <div class="col-12 text-center" style="padding-top: 10px; padding-bottom: 5px;"> <!-- Logo Row -->
+                        <a href="index.html" class="logo_normal"><img src="img/logo.png" height="70" alt=""></a>
+                        <a href="index.html" class="logo_sticky"><img src="img/logo_sticky.png" height="70" alt=""></a>
+                    </div>
+                </div>
+                <div class="row align-items-center" style="padding-bottom: 10px;"> <!-- Icon Row -->
+                    <div class="col-12">
+                        <nav>
+                            <ul
+                                style="display: flex; justify-content: space-around; align-items: center; list-style: none; padding: 0; margin: 0;">
+                                <li class="language-selector-dropdown">
+                                    <a class="dropdown-toggle" href="#" id="languageDropdownMenuLinkMobile"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                        style="padding: 10px; display: inline-block; text-decoration: none;">
+                                        <i class="fas fa-globe"></i> <span id="current-lang-text-mobile">EN</span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end"
+                                        aria-labelledby="languageDropdownMenuLinkMobile">
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="changeLanguage('en'); return false;" data-lang="en">English</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="changeLanguage('es'); return false;" data-lang="es">Español</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="cart.html" class="cart-icon-link">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        <span class="cart-count">0</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0" class="menu_open">
+                                        <div class="hamburger hamburger--spin">
+                                            <div class="hamburger-box">
+                                                <div class="hamburger-inner"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="panel_menu">
+        <div class="panel__content">
+            <div class="panel__content_wrapper">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-5">
+                            <nav class="wrapper_menu">
+                                <ul>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="index.html" class="link">Home</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="hotels.html">Luxury Villas & Resorts</a>
+                                            <div class="image">
+                                                <img src="img/navbar/hotel.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="yachts.html">Private Yacht Charters</a>
+                                            <div class="image">
+                                                <!-- TODO: change this to yacht -->
+                                                <img src="img/navbar/yacht.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="jets.html">Private Jet</a>
+                                            <div class="image">
+                                                <img src="img/navbar/jet.png" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="golf.html">Golf Courses</a>
+                                            <div class="image">
+                                                <img src="img/navbar/golf.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="about.html">About</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="news.html">News & Events</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="container-item">
+                                            <a href="contacts.html">Contacts</a>
+                                            <div class="image">
+                                                <img src="img/navbar/home.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav><!-- /wrapper_menu -->
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-end">
+                            <div class="menu_panel_details">
+                                <div class="row justify-content-between">
+                                    <div class="col-lg-6 mb-lg-0 mb-4">
+                                        <h5>Address</h5>
+                                        <p>PT. Anggun Royal Travel<br>Lombok, Indonesia</p>
+
+                                    </div>
+                                    <div class="col-lg-5 mb-lg-0 mb-4">
+                                        <h5>Contacts</h5>
+                                        <div class="contacts">
+                                            <ul>
+                                                <li><a>+ 62 822 375 865 65</a></li>
+                                                <li><a>info@royaltravel.agency</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social">
+                                            <ul>
+                                                <li><a href="https://www.instagram.com/royaltravelluxury"
+                                                        target="_blank"><i class="bi bi-instagram"></i></a></li>
+                                                <li><a href="https://wa.me/+6282237586565" target="_blank"><i
+                                                            class="bi bi-whatsapp"></i></a></li>
+                                                <li><a href="https://web.facebook.com/profile.php?id=61573090605100"
+                                                        target="_blank"><i class="bi bi-facebook"></i></a></li>
+                                                <li><a href="https://x.com/RoyalTrvl" target="_blank"><i
+                                                            class="bi bi-twitter-x"></i></a></li>
+                                                <li><a href="https://www.tiktok.com/@royaltravelluxury"
+                                                        target="_blank"><i class="bi bi-tiktok"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar -->
+
+
+    <main>
+        <!-- Hero Section: Luxury Yacht Showcase -->
+        <section class="hero-section" style="background-image: url('img/yachts/yacht-hero.jpg');">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-10" data-aos="fade-up" data-aos-delay="200">
+                        <h1 class="yacht-title">Sovereign Elegance</h1>
+                        <p class="yacht-tagline">Sail in Ultimate Luxury Through Paradise</p>
+                        <a href="#booking_section" class="btn_1 btn-lg">Book This Yacht</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <a href="#yacht-info"><i class="bi bi-chevron-down"></i></a>
+            </div>
+        </section>
+        <!-- /Hero Section -->
+
+        <!-- Yacht Information -->
+        <section id="yacht-info" class="yacht-info-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7" data-aos="fade-right">
+                        <div class="yacht-description">
+                            <h2 class="section-title">Experience Unparalleled Luxury</h2>
+                            <p class="lead">The Sovereign Elegance represents the pinnacle of maritime luxury, combining
+                                sophisticated design with exceptional comfort.</p>
+                            <p>This magnificent vessel offers an unforgettable experience, whether you're seeking a day
+                                of sophisticated leisure or an extended journey through exotic islands. Every inch of
+                                the yacht has been meticulously designed to provide an atmosphere of refined luxury and
+                                relaxation.</p>
+                            <p>Our expert crew, including a personal chef, captain, and dedicated host, ensures that
+                                every aspect of your journey exceeds expectations. From custom-crafted gourmet meals to
+                                perfectly timed excursions, no detail is overlooked.</p>
+                            <p>The Sovereign Elegance is the ultimate choice for those who seek exclusivity, privacy,
+                                and uncompromising luxury on the water. With spacious entertainment areas, private
+                                cabins adorned with premium materials, and cutting-edge technology, this yacht offers
+                                everything you could desire for an extraordinary maritime experience.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5" data-aos="fade-left">
+                        <div class="key-details-card">
+                            <h3>Key Details</h3>
+                            <ul class="details-list">
+                                <li>
+                                    <i class="bi bi-water"></i>
+                                    <div class="detail-content">
+                                        <span class="detail-title">Type</span>
+                                        <span class="detail-info">Luxury Motor Yacht</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="bi bi-rulers"></i>
+                                    <div class="detail-content">
+                                        <span class="detail-title">Size</span>
+                                        <span class="detail-info">42m Superyacht</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="bi bi-people-fill"></i>
+                                    <div class="detail-content">
+                                        <span class="detail-title">Capacity</span>
+                                        <span class="detail-info">Up to 12 guests</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="bi bi-house-door"></i>
+                                    <div class="detail-content">
+                                        <span class="detail-title">Cabins</span>
+                                        <span class="detail-info">6 Luxury Suites</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="bi bi-person-badge"></i>
+                                    <div class="detail-content">
+                                        <span class="detail-title">Crew</span>
+                                        <span class="detail-info">Captain, Chef, 3 Hosts</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="bi bi-stars"></i>
+                                    <div class="detail-content">
+                                        <span class="detail-title">Luxury Features</span>
+                                        <span class="detail-info">Private Deck, Jacuzzi, Water Toys, Wine Cellar</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Yacht Information -->
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center" data-aos="fade-up">
+                        <h2 class="section-title">Explore The Yacht</h2>
+                        <p class="section-subtitle">Take a visual tour of our luxury yacht's elegant spaces</p>
+                    </div>
+                </div>
+                <div class="row gallery-grid">
+                    <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                        <a href="img/yachts/yacht-exterior-1.jpg" class="gallery-link">
+                            <img src="img/yachts/yacht-exterior-1.jpg" alt="Yacht Exterior" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <i class="bi bi-plus-lg"></i>
+                                <h4>Exterior View</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                        <a href="img/yachts/yacht-lounge-1.jpg" class="gallery-link">
+                            <img src="img/yachts/yacht-lounge-1.jpg" alt="Main Lounge" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <i class="bi bi-plus-lg"></i>
+                                <h4>Main Lounge</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                        <a href="img/yachts/yacht-dining-1.jpg" class="gallery-link">
+                            <img src="img/yachts/yacht-dining-1.jpg" alt="Dining Area" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <i class="bi bi-plus-lg"></i>
+                                <h4>Dining Area</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                        <a href="img/yachts/yacht-master-cabin.jpg" class="gallery-link">
+                            <img src="img/yachts/yacht-master-cabin.jpg" alt="Master Cabin" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <i class="bi bi-plus-lg"></i>
+                                <h4>Master Cabin</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                        <a href="img/yachts/yacht-deck-1.jpg" class="gallery-link">
+                            <img src="img/yachts/yacht-deck-1.jpg" alt="Sundeck" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <i class="bi bi-plus-lg"></i>
+                                <h4>Sundeck</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                        <a href="img/yachts/yacht-jacuzzi.jpg" class="gallery-link">
+                            <img src="img/yachts/yacht-jacuzzi.jpg" alt="Jacuzzi" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <i class="bi bi-plus-lg"></i>
+                                <h4>Jacuzzi</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Gallery Section -->
+
+        <!-- Schedule Section -->
+        <section id="schedule_section" class="schedule-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center" data-aos="fade-up">
+                        <h2 class="section-title">Yacht Schedule</h2>
+                        <p class="section-subtitle">View upcoming availability and plan your luxury voyage</p>
+                    </div>
+                </div>
+
+                <div class="row" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-12 mx-auto">
+                        <div class="schedule-tabs">
+                            <ul class="nav nav-tabs" id="scheduleTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="upcoming-tab" data-bs-toggle="tab"
+                                        data-bs-target="#upcoming" type="button" role="tab" aria-controls="upcoming"
+                                        aria-selected="true">Upcoming Availability</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="special-tab" data-bs-toggle="tab"
+                                        data-bs-target="#special" type="button" role="tab" aria-controls="special"
+                                        aria-selected="false">Special Voyages</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="events-tab" data-bs-toggle="tab"
+                                        data-bs-target="#events" type="button" role="tab" aria-controls="events"
+                                        aria-selected="false">Private Events</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content " id="scheduleTabContent">
+                                <!-- Upcoming Availability Tab -->
+                                <div class="tab-pane fade show active" id="upcoming" role="tabpanel"
+                                    aria-labelledby="upcoming-tab">
+                                    <div class="schedule-calendar">
+                                        <div class="month-navigation">
+                                            <button type="button" class="prev-month" id="prevMonthBtn"
+                                                style="padding: 10px 15px;" onclick="handlePrevMonth()"><i
+                                                    class="bi bi-chevron-left"></i> Prev</button>
+                                            <h3 class="current-month">November 2023</h3>
+                                            <button type="button" class="next-month" id="nextMonthBtn"
+                                                style="padding: 10px 15px;" onclick="handleNextMonth()">Next <i
+                                                    class="bi bi-chevron-right"></i></button>
+                                        </div>
+
+                                        <div class="schedule-table">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Date</th>
+                                                        <th>Status</th>
+                                                        <th>Sailing Route</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="available">
+                                                        <td>November 5-8, 2023</td>
+                                                        <td><span class="status-badge available">Available</span></td>
+                                                        <td>Bali → Lombok → Komodo → Bali</td>
+                                                    </tr>
+                                                    <tr class="booked">
+                                                        <td>November 10-14, 2023</td>
+                                                        <td><span class="status-badge booked">Reserved</span></td>
+                                                        <td>Bali → Raja Ampat → Wakatobi → Bali</td>
+                                                    </tr>
+                                                    <tr class="available">
+                                                        <td>November 16-19, 2023</td>
+                                                        <td><span class="status-badge available">Available</span></td>
+                                                        <td>Komodo → Flores → Sumba → Komodo</td>
+                                                    </tr>
+                                                    <tr class="available">
+                                                        <td>November 21-25, 2023</td>
+                                                        <td><span class="status-badge available">Available</span></td>
+                                                        <td>Bali → Nusa Penida → Gili Islands → Bali</td>
+                                                    </tr>
+                                                    <tr class="maintenance">
+                                                        <td>November 27-30, 2023</td>
+                                                        <td><span class="status-badge maintenance">Maintenance</span>
+                                                        </td>
+                                                        <td>Bali Marina (Docked for maintenance)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Special Voyages Tab -->
+                                <div class="tab-pane fade" id="special" role="tabpanel" aria-labelledby="special-tab">
+                                    <div class="row special-voyages g-2">
+                                        <div class="voyage-card col-lg-4 col-md-6">
+                                            <div class="voyage-image">
+                                                <img src="img/yachts/special-voyage-1.jpg"
+                                                    alt="New Year's Luxury Cruise" class="img-fluid">
+                                                <span class="voyage-tag">Limited Spots</span>
+                                            </div>
+                                            <div class="voyage-details">
+                                                <h4>New Year's Luxury Cruise</h4>
+                                                <div class="voyage-info">
+                                                    <p><i class="bi bi-calendar-event"></i> December 29, 2023 - January
+                                                        3, 2024</p>
+                                                    <p><i class="bi bi-geo-alt"></i> Bali to Raja Ampat</p>
+                                                    <p><i class="bi bi-people-fill"></i> 10 spots available</p>
+                                                </div>
+                                                <p class="voyage-description">Celebrate the New Year in ultimate luxury
+                                                    with an exclusive 5-night journey through Indonesia's most
+                                                    breathtaking islands. Includes special New Year's Eve gala dinner.
+                                                </p>
+                                                <a href="#booking_section" class="btn_1">Reserve Now</a>
+                                            </div>
+                                        </div>
+                                        <div class="voyage-card col-lg-4 col-md-6">
+                                            <div class="voyage-image">
+                                                <img src="img/yachts/special-voyage-2.jpg"
+                                                    alt="Valentine's Romantic Getaway" class="img-fluid">
+                                                <span class="voyage-tag">Couples Only</span>
+                                            </div>
+                                            <div class="voyage-details">
+                                                <h4>Valentine's Romantic Getaway</h4>
+                                                <div class="voyage-info">
+                                                    <p><i class="bi bi-calendar-event"></i> February 12-15, 2024</p>
+                                                    <p><i class="bi bi-geo-alt"></i> Private Islands Tour</p>
+                                                    <p><i class="bi bi-people-fill"></i> 6 couples maximum</p>
+                                                </div>
+                                                <p class="voyage-description">A romantic 3-night voyage specifically
+                                                    designed for couples. Includes private dining experiences, couple's
+                                                    spa treatments, and sunset champagne toasts.</p>
+                                                <a href="#booking_section" class="btn_1">Reserve Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Private Events Tab -->
+                                <div class="tab-pane fade" id="events" role="tabpanel" aria-labelledby="events-tab">
+                                    <div class="events-content">
+                                        <div class="row">
+                                            <div class="col-md-6 col-lg-4">
+                                                <div class="event-type-card">
+                                                    <div class="event-icon">
+                                                        <i class="bi bi-heart"></i>
+                                                    </div>
+                                                    <h4>Weddings & Anniversaries</h4>
+                                                    <p>Make your special day truly extraordinary aboard our luxury
+                                                        yacht. Our dedicated event planners will create a bespoke
+                                                        celebration to remember.</p>
+                                                    <ul class="event-features">
+                                                        <li><i class="bi bi-check-circle"></i> Custom decor & setup</li>
+                                                        <li><i class="bi bi-check-circle"></i> Catering & premium
+                                                            beverages</li>
+                                                        <li><i class="bi bi-check-circle"></i> Photography services</li>
+                                                        <li><i class="bi bi-check-circle"></i> Ceremony coordination
+                                                        </li>
+                                                    </ul>
+                                                    <a href="#booking_section" class="btn_1">Inquire Now</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-4">
+                                                <div class="event-type-card">
+                                                    <div class="event-icon">
+                                                        <i class="bi bi-briefcase"></i>
+                                                    </div>
+                                                    <h4>Corporate Retreats</h4>
+                                                    <p>Elevate your business meetings and team-building events with our
+                                                        exclusive corporate packages designed for productivity and
+                                                        luxury.</p>
+                                                    <ul class="event-features">
+                                                        <li><i class="bi bi-check-circle"></i> Meeting facilities</li>
+                                                        <li><i class="bi bi-check-circle"></i> Team activities</li>
+                                                        <li><i class="bi bi-check-circle"></i> Gourmet catering</li>
+                                                        <li><i class="bi bi-check-circle"></i> Technology support</li>
+                                                    </ul>
+                                                    <a href="#booking_section" class="btn_1">Inquire Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Schedule Section -->
+
+        <!-- Pricing & Booking -->
+        <section id="booking_section" class="booking-section bg_gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center" data-aos="fade-up">
+                        <h2 class="section-title">Charter Pricing</h2>
+                        <p class="section-subtitle">Select the perfect package for your luxury experience</p>
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-12 mx-auto">
+                        <div class="pricing-table">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Package</th>
+                                        <th>Duration</th>
+                                        <th>Includes</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Day Charter</strong></td>
+                                        <td>8 Hours</td>
+                                        <td>Gourmet lunch, drinks, water activities</td>
+                                        <td>$9,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Sunset Experience</strong></td>
+                                        <td>4 Hours</td>
+                                        <td>Champagne, canapés, sunset cruise</td>
+                                        <td>$6,200</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Overnight Luxury</strong></td>
+                                        <td>24 Hours</td>
+                                        <td>All meals, activities, overnight accommodation</td>
+                                        <td>$18,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Week Expedition</strong></td>
+                                        <td>7 Days</td>
+                                        <td>Full service, island hopping, all-inclusive</td>
+                                        <td>$115,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- /Pricing & Booking -->
+
+
+
+        <!-- How It Works -->
+        <div class="home section-4 how-it-works">
+            <div class="container margin_120_95">
+                <div class="title text-center mb-5">
+                    <small data-cue="slideInUp">Your Journey Begins Here</small>
+                    <h2 data-cue="slideInUp" data-delay="100">How to Use Our Website</h2>
+                    <p class="lead" data-cue="slideInUp" data-delay="200">Follow these simple steps to plan your luxury
+                        experience with Royal Travel.</p>
+                </div>
+
+                <div class="row process-steps" data-cues="slideInUp" data-delay="300">
+                    <div class="col-lg-3">
+                        <div class="process-box" data-cue="slideInUp">
+                            <span class="step-number">01</span>
+                            <i class="bi bi-search"></i>
+                            <h3>View Our Services</h3>
+                            <p>Explore our range of luxury offerings, including exclusive hotels, private yachts, jets,
+                                and golf courses.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="process-box" data-cue="slideInUp" data-delay="200">
+                            <span class="step-number">02</span>
+                            <i class="bi bi-cart-plus"></i>
+                            <h3>Add to Cart</h3>
+                            <p>Select your desired services and add them to your cart to build your personalized
+                                itinerary.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="process-box" data-cue="slideInUp" data-delay="400">
+                            <span class="step-number">03</span>
+                            <i class="bi bi-send-check"></i>
+                            <h3>Submit Your Request</h3>
+                            <p>Proceed to your cart, review your selections, and submit your request for a bespoke
+                                travel plan.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="process-box" data-cue="slideInUp" data-delay="600">
+                            <span class="step-number">04</span>
+                            <i class="bi bi-headset"></i>
+                            <h3>Our Staff Will Contact You</h3>
+                            <p>Once we receive your request, our dedicated staff will contact you to finalize the
+                                details and confirm your booking.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="mt-5 mb-5">
+
+                <div class="row justify-content-center pt-4 ">
+                    <div class="col-lg-8 text-center justify-content-center">
+                        <div data-cue="slideInUp justify-content-center">
+                            <div class="title">
+                                <small>Alternatively</small>
+                                <h2>Prefer a Direct Consultation?</h2>
+                            </div>
+                            <p>If you have specific requirements or prefer to discuss your travel plans directly with
+                                our VIP concierge, we're here to assist. Contact us for a personalized planning
+                                experience.</p>
+                            <p class=""><strong>Call our VIP Concierge:</strong> <a href="tel:+6282237586565">+62 822
+                                    375
+                                    865 65</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /container -->
+
+    </main>
+    <footer class="revealed">
+        <div class="footer_bg">
+            <div class="gradient_over"></div>
+            <div class="background-image" data-background="url(img/footer.jpg)"></div>
+        </div>
+        <div class="container">
+            <div class="row move_content">
+                <div class="col-lg-4 col-md-12">
+                    <h5>Contacts</h5>
+                    <ul>
+                        <li>PT. Anggun Royal Travel<br>Lombok, Indonesia<br><br></li>
+                        <li><strong><a>info@royaltravel.agency</a></strong></li>
+                        <li><strong><a>+ 62 822 375 865 65</a></strong></li>
+                    </ul>
+                    <div class="social">
+                        <ul>
+                            <li><a href="https://www.instagram.com/royaltravelluxury" target="_blank"><i
+                                        class="bi bi-instagram"></i></a></li>
+                            <li><a href="https://wa.me/+6282237586565" target="_blank"><i
+                                        class="bi bi-whatsapp"></i></a></li>
+                            <li><a href="https://web.facebook.com/profile.php?id=61573090605100" target="_blank"><i
+                                        class="bi bi-facebook"></i></a></li>
+                            <li><a href="https://x.com/RoyalTrvl" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                            </li>
+                            <li><a href="https://www.tiktok.com/@royaltravelluxury" target="_blank"><i
+                                        class="bi bi-tiktok"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 ms-lg-auto">
+                    <h5>Explore</h5>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="hotels.html">Luxury Villas & Resorts</a></li>
+                            <li><a href="yachts.html">Private Yacht Charters</a></li>
+                            <li><a href="jets.html">Private Jet</a></li>
+                            <li><a href="golf.html">Golf Courses</a></li>
+                            <li><a href="news.html">News &amp; Events</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div id="newsletter">
+                        <h5>Newsletter</h5>
+                        <div id="message-newsletter"></div>
+                        <form method="post" action="phpmailer/newsletter_template_email.php" name="newsletter_form"
+                            id="newsletter_form">
+                            <div class="form-group">
+                                <input type="email" name="email_newsletter" id="email_newsletter" class="form-control"
+                                    placeholder="Your email">
+                                <button type="submit" id="submit-newsletter"><i class="bi bi-send"></i></button>
+                            </div>
+                        </form>
+                        <p>Receive latest offers and promos without spam. You can cancel anytime.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/row-->
+        </div>
+        <!--/container-->
+        <div class="copy">
+            <div class="container">
+                Royal Travel Agency
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- /back to top -->
+
+
+    <!-- COMMON SCRIPTS -->
+    <!-- If not already included in common_scripts.js -->
+     <script src="js/config.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/common_scripts.js"></script>
+    <script src="js/common_functions.js"></script>
+    <script src="phpmailer/validate.js"></script>
+
+    <!-- Additional Libraries -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Initialize custom scripts last -->
+    <script src="js/yacht-detail.js"></script>
+
+    <!-- Additional script to ensure buttons work -->
+    <script>
+        // Global variables for month navigation
+        let currentMonthIndex = new Date().getMonth();
+        let currentYear = new Date().getFullYear();
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        const startingMonth = currentMonthIndex;
+        const startingYear = currentYear;
+        const maxYear = currentYear + 2;
+
+        // Define handler functions for month navigation
+        function handlePrevMonth() {
+            console.log('Previous month button clicked via onclick');
+
+            // Only allow going back to the current month (starting point)
+            if (currentYear === startingYear && currentMonthIndex === startingMonth) {
+                console.log('Cannot go before current month');
+                return; // Don't go before current month
+            }
+
+            currentMonthIndex--;
+            if (currentMonthIndex < 0) {
+                currentMonthIndex = 11;
+                currentYear--;
+            }
+
+            // Update the month display
+            document.querySelector('.current-month').textContent = `${months[currentMonthIndex]} ${currentYear}`;
+
+            console.log(`Navigated to: ${months[currentMonthIndex]} ${currentYear}`);
+        }
+
+        function handleNextMonth() {
+            console.log('Next month button clicked via onclick');
+
+            // Check if we've reached the max date (2 years from now)
+            if (currentYear >= maxYear && currentMonthIndex >= startingMonth) {
+                console.log('Cannot go beyond 2 years from now');
+                return; // Don't go beyond 2 years from now
+            }
+
+            currentMonthIndex++;
+            if (currentMonthIndex > 11) {
+                currentMonthIndex = 0;
+                currentYear++;
+            }
+
+            // Update the month display
+            document.querySelector('.current-month').textContent = `${months[currentMonthIndex]} ${currentYear}`;
+
+            console.log(`Navigated to: ${months[currentMonthIndex]} ${currentYear}`);
+        }
+
+        // Make sure DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('DOM fully loaded');
+
+            // Check if month navigation buttons exist
+            const prevButton = document.querySelector('.prev-month');
+            const nextButton = document.querySelector('.next-month');
+
+            console.log('Previous month button exists:', !!prevButton);
+            console.log('Next month button exists:', !!nextButton);
+
+            // Set initial month display
+            document.querySelector('.current-month').textContent = `${months[currentMonthIndex]} ${currentYear}`;
+        });
+    </script>
+
+    <script src="js/cart.js"></script>
+
+
+    <!-- Language switcher script -->
+    <script src="js/language.js"></script>
+</body>
+
+</html>
