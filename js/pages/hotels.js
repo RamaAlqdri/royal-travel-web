@@ -2,7 +2,7 @@
 
 (() => {
   // ========= CONFIG =========
-  const API_BASE = 'http://localhost:3000';           // ganti jika perlu
+  const API_BASE = window.APP_CONFIG?.API_BASE || "";          // ganti jika perlu
   const LIST_ENDPOINT = `${API_BASE}/api/hotels`;
   const DEFAULT_LIMIT = 12;
 
